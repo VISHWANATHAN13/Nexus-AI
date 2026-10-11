@@ -1,0 +1,123 @@
+MERIDIAN FINANCIAL GROUP - BANKING PRODUCTS FAQs
+Last Updated: 2026-01-01
+
+SECTION 1: SAVINGS & CURRENT ACCOUNTS
+
+Q1.1: What is the minimum balance requirement for a Meridian Savings Account?
+A: The minimum opening balance is 10,000 INR for Standard Tier and 100,000 INR for Premium Tier. If the balance falls below the minimum, the account is classified as dormant after 12 consecutive months, and quarterly maintenance fees of 50 INR are levied.
+
+Q1.2: Can I close my account anytime without penalty?
+A: Yes, you can close your account anytime after 6 months of opening. If you close within 6 months, a closure fee of 1,000 INR applies. After 6 months, account closure is free and processes within 5-7 business days.
+
+Q1.3: How many free ATM withdrawals do I get per month?
+A: Standard Tier gets 5 free ATM withdrawals per month; additional withdrawals are charged 20 INR each. Premium Tier members get unlimited free ATM withdrawals across all Meridian ATMs.
+
+Q1.4: Can I set up auto-debit for insurance premium payments?
+A: Yes, auto-debit is available for insurance premiums, utility bills, and loan EMIs. You need to authorize an auto-debit mandate (physical or e-signed) specifying the payee, amount, and frequency. The payment is processed on your chosen date (1st-28th of the month).
+
+Q1.5: What happens if my auto-debit fails due to insufficient balance?
+A: The system automatically retries the auto-debit on the next business day. If it fails again, you need to manually process the payment. Two consecutive failures result in auto-debit mandate cancellation, and you'll need to re-authorize to resume auto-debit facility.
+
+Q1.6: Can I link external bank accounts to my Meridian savings account for transfers?
+A: Yes, you can link up to 5 external accounts via NEFT/RTGS. The first transfer from a new linked account is limited to 10,000 INR for security. Subsequent transfers are unlimited once the linking is confirmed (3-7 business days).
+
+Q1.7: Can I overdraw from my savings account?
+A: No, overdraft is not available on standard Savings Accounts. However, Premium Tier customers can access overdraft facility up to 50% of the highest balance maintained in the past 12 months. Overdraft interest is charged at Repo Rate + 2.5%.
+
+Q1.8: What is a sweep account, and how does it help?
+A: A sweep account automatically transfers surplus balance from your savings account to a linked Fixed Deposit when the balance exceeds a threshold you set (minimum threshold: 10,000 INR). This helps earn higher interest rates on excess funds while keeping liquidity available.
+
+SECTION 2: FIXED DEPOSITS & RECURRING DEPOSITS
+
+Q2.1: What are the interest rates for Fixed Deposits?
+A: Current rates vary by tenure:
+- 1 Year: 5.5% p.a.
+- 3 Years: 6.75% p.a.
+- 5 Years: 7.2% p.a.
+Senior citizens (60+ years) receive an additional 0.75% per annum.
+
+Q2.2: Can I withdraw money from my FD before maturity?
+A: Yes, you can withdraw after 6 months with a penalty. The penalty is typically 0.5% of interest earned plus forfeiture of remaining interest. Full FD amount is available for withdrawal anytime, but you'll lose the interest benefit.
+
+Q2.3: What is the difference between simple and compound interest on FDs?
+A: Simple interest is calculated on the principal only. Compound interest (offered on most Meridian FDs) is calculated on the principal plus accumulated interest. Compound interest typically results in higher returns, especially for longer tenures.
+
+Q2.4: How often is interest credited to my account?
+A: Interest is typically credited annually at maturity or monthly/quarterly based on your preference during FD opening. You can request monthly/quarterly crediting by submitting a request to your branch or online portal.
+
+Q2.5: Can I take a loan against my Fixed Deposit?
+A: Yes, you can borrow up to 90% of your FD value at an interest rate 0.5% higher than your FD rate. The loan must be repaid before FD maturity, and the FD remains as collateral with Meridian.
+
+Q2.6: What is a Recurring Deposit, and how does it work?
+A: A Recurring Deposit (RD) is a savings scheme where you deposit a fixed amount (minimum 1,000 INR) monthly for a fixed tenure (typically 3-5 years). Interest is compounded quarterly, and at maturity, you receive the total principal plus accumulated interest.
+
+SECTION 3: LOANS
+
+Q3.1: What are the eligibility criteria for a Meridian Personal Loan?
+A: You must be 21-60 years old with a minimum monthly income of 15,000 INR (salaried) or 25,000 INR (self-employed). You need to be employed for at least 2 years with your current employer or business registered for 3+ years. A CIBIL score of 700+ is preferred.
+
+Q3.2: What is the interest rate range for Personal Loans?
+A: Personal Loan interest rates range from 12.5% to 16% p.a., depending on your credit profile, income, loan amount, and tenure. The interest is calculated on a reducing balance basis.
+
+Q3.3: How long does it take to get approval for a Personal Loan?
+A: Most Personal Loans are approved within 2-3 business days after document submission. Disbursement follows within 1-2 business days of approval, depending on your bank details accuracy.
+
+Q3.4: Can I repay my loan early without penalty?
+A: Yes, you can make partial or full prepayment anytime without penalty. Prepayment will reduce your EMI (if you choose to reduce EMI) or shorten the tenure. Interest will be calculated on the reducing balance basis.
+
+Q3.5: What documents are required for a Home Loan application?
+A: Required documents include:
+- Identity proof (Aadhaar, PAN, Passport)
+- Address proof (Utility bill, rental agreement)
+- Income proof (Last 2 years income tax returns, salary slips)
+- Property documents (Sale agreement, property registration details)
+- Bank statements (Last 6 months)
+- Spouse's documents (if co-applicant)
+
+Q3.6: What is the maximum loan tenure for a Home Loan?
+A: Maximum tenure for Home Loans is 30 years. However, tenure is also dependent on the applicant's age at maturity. The bank typically ensures the loan is repaid before the applicant turns 70 years old.
+
+Q3.7: Are there tax benefits on Home Loan interest?
+A: Yes, under Section 24 of the Income Tax Act, you can claim deduction on home loan interest up to 2,00,000 INR per annum. Principal repayment is covered under Section 80C with an annual limit of 1,50,000 INR (including other investments).
+
+Q3.8: What are the charges for Education Loans?
+A: Education Loans have minimal charges. Processing fee is 0.5% of loan amount (capped at 5,000 INR), and no prepayment penalty applies. Interest rates start at 6% p.a., with moratorium period until one year after course completion.
+
+SECTION 4: CREDIT CARDS
+
+Q4.1: What is the credit limit for a new Meridian Credit Card?
+A: Your initial credit limit depends on your income, employment stability, and credit history (CIBIL score). Typically, credit limits range from 50,000 INR (entry-level) to 5,00,000+ INR (premium cards). The credit limit is reviewed every 6 months and can be increased based on your payment behavior.
+
+Q4.2: What is the grace period on credit card purchases?
+A: All credit card purchases have a 45-day interest-free period. If you pay your full bill by the due date, no interest is charged. If you carry a balance, interest is calculated at 2.5% per month (30% p.a.) on the outstanding amount.
+
+Q4.3: How do I activate rewards on my credit card?
+A: Rewards are automatically credited based on your spending. Standard card offers 2% rewards on all purchases (equivalent to 1 rupee per 50 rupees spent), and premium cards offer 3% rewards. Rewards can be redeemed for shopping, cashback, or flight bookings.
+
+Q4.4: What is an EMI conversion option, and when is it useful?
+A: EMI conversion allows you to convert any purchase above a threshold (typically 5,000 INR) into equal monthly installments over 3, 6, 9, or 12 months. This is useful for large purchases to manage your cash flow better. Processing fee is typically 0.5-1% of the purchase amount.
+
+Q4.5: Are there any international transaction charges on my credit card?
+A: International transactions (foreign currency purchases) are charged at 1.75% + GST conversion markup. No additional foreign transaction fee is charged for premium cardholders. ATM cash withdrawals abroad are charged at 2% + GST + bank charges.
+
+SECTION 5: GENERAL ACCOUNT QUESTIONS
+
+Q5.1: What is KYC, and why is it required?
+A: KYC (Know Your Customer) is a regulatory requirement where you provide identity, address, and income details to Meridian. It's done at account opening and updated annually. KYC ensures compliance with anti-money laundering and fraud prevention regulations.
+
+Q5.2: How can I update my KYC details?
+A: You can update KYC details online through the mobile app or website (for simple updates like address), or visit your nearest branch with updated documents. Annual KYC update is mandatory; failure to update may result in account restrictions.
+
+Q5.3: What is a CIBIL score, and why does it matter?
+A: CIBIL (Credit Information Bureau India Limited) score is a 3-digit number (300-900) that reflects your creditworthiness based on your loan repayment and credit card payment history. Lenders use this score to decide loan eligibility and interest rates. A higher score (700+) increases approval chances and gets you better rates.
+
+Q5.4: How can I improve my CIBIL score?
+A: To improve your CIBIL score:
+- Pay all bills and EMIs on time
+- Keep credit card utilization below 30% of limit
+- Avoid multiple loan applications in short period
+- Maintain low loan balances
+- Monitor your credit report for errors and report discrepancies
+
+Q5.5: What happens to my account if I don't transact for 12 months?
+A: Your account is classified as dormant after 12 months of no transactions. Dormant accounts incur quarterly maintenance charges of 50 INR. To reactivate, submit a reactivation request to your branch with 250 INR fee.

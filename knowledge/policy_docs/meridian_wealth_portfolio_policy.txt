@@ -1,0 +1,148 @@
+MERIDIAN FINANCIAL GROUP - WEALTH MANAGEMENT & PORTFOLIO POLICY
+Version 3.1, Effective 2026-01-01
+
+SECTION 1: PORTFOLIO ACCOUNT OPENING & ELIGIBILITY
+1.1 Account Types
+Meridian Wealth Management offers three account tiers:
+- Classic Portfolio: Minimum initial investment 5,00,000 INR; asset management fee 0.75% p.a.
+- Premier Portfolio: Minimum initial investment 25,00,000 INR; asset management fee 0.50% p.a.; dedicated advisor included
+- Elite Portfolio: Minimum initial investment 1,00,00,000 INR; asset management fee 0.35% p.a.; personalized wealth strategy, tax planning
+
+1.2 Eligible Investors
+- Resident Indian nationals (18+ years)
+- NRI with valid PIO/OCI status and tax residency certificate
+- Entities: HUF, Trusts, Private Limited Companies, Foundations (requires board resolution)
+- Joint portfolios: Maximum 3 holders; each must complete separate KYC
+
+1.3 Risk Profiling & Suitability Assessment
+All investors must complete Meridian's proprietary risk assessment questionnaire covering:
+- Income stability and investment horizon (3-5 years minimum for equity portfolio)
+- Debt obligations and liquidity needs
+- Previous investment experience and risk tolerance (scale: Very Conservative to Aggressive)
+- Financial goals and target returns
+Risk profile cannot be changed without 60-day review period and updated compliance documentation.
+
+SECTION 2: PORTFOLIO INVESTMENT OPTIONS
+2.1 Equity Investments (Market-Linked)
+- Direct equity stocks: Blue-chip (BSE100), mid-cap, small-cap equities
+- Equity-linked mutual funds: Index-tracking, active management, sector-focused
+- IPO allocations: Priority access to upcoming public listings
+- Minimum holding period: 12 months (advisory; not contractual)
+- Volatility disclosure: Expected volatility 15-35% p.a.; may see 20%+ drawdowns in market corrections
+
+2.2 Fixed Income & Debt Instruments
+- Government securities (dated G-secs, T-bills): 2-30 year maturities
+- Corporate bonds (AAA/AA rated): 5-10 year tenures; yield 7-9% p.a.
+- Fixed Deposits (FDs): 1-10 year tenure with banks rated A+ or higher
+- Bond funds (mutual funds): Diversified, short-duration, ultra-short-duration options
+- Minimum FD tenure: 3 years for lock-in benefit; 1 year for regular FD
+
+2.3 Alternative Investments (Premier+ Accounts Only)
+- Real Estate Investment Trusts (REITs): Listed, dividend-yielding
+- Infrastructure bonds: Rated AA+ and above; 10-15 year tenure
+- Gold ETFs & Sovereign Gold Bonds: Held via Demat account
+- Private equity funds: Accredited investors only; 5-7 year lock-in typical
+- Hedge funds (offshore): Available to Elite Portfolio customers with minimum 50 crore AUM
+
+2.4 Asset Allocation Models
+Standard allocation templates (customization available):
+- Equity-Heavy (Aggressive): 70% equities, 20% debt, 10% alternatives
+- Balanced Growth: 50% equities, 40% debt, 10% alternatives/cash
+- Income-Focused (Conservative): 30% equities, 60% debt, 10% cash/alternatives
+- Capital Preservation: 10% equities, 70% debt, 20% cash/money-market
+
+SECTION 3: FEE STRUCTURE & CHARGES
+3.1 Asset Management Fees (% of AUM, charged quarterly)
+- Classic: 0.75% p.a. (waived if AUM falls below 2,00,000 INR)
+- Premier: 0.50% p.a. (waived if AUM falls below 10,00,000 INR)
+- Elite: 0.35% p.a. (no waiver; complimentary planning services included)
+
+3.2 Transaction & Advisory Charges
+- Rebalancing fee (quarterly): Included in asset management fee (max 2 rebalancing events per quarter free)
+- Additional rebalancing: 2,500 INR per rebalancing event
+- Mutual fund switch fee: 500 INR per switch (limit 6 switches per quarter free)
+- Withdrawal/redemption fee: Nil if held >12 months; 1% if within 12 months (capped at 25,000 INR)
+- Advisory consultation (off-cycle): 5,000 INR per hour for non-Premier customers; complimentary for Premier+
+
+3.3 Tax & Regulatory Compliance
+- Tax-loss harvesting service (Elite only): 10,000 INR per calendar quarter
+- Audit & compliance documentation: 2,500 INR annual (included in Premier+)
+- Form 26AS coordination: Complimentary for all portfolios
+
+3.4 Fee Deduction Methodology
+- Fees debited on the 1st calendar day of each quarter from cash balance/money-market holdings
+- If insufficient cash, fees charged to Fixed Deposit holdings; else to liquid mutual funds
+- Unpaid fees (>30 days overdue) result in portfolio freeze; no transactions permitted until settlement
+
+SECTION 4: REBALANCING & PORTFOLIO REVIEW
+4.1 Rebalancing Policy
+- Automatic rebalancing triggered if any asset class deviates >10% from target allocation
+- Quarterly rebalancing reviews conducted at end of March, June, September, December
+- Rebalancing executed within 5 business days of decision (subject to market conditions)
+- Rebalancing cost (brokerage, commissions) borne by portfolio; itemized in monthly statement
+
+4.2 Performance Reporting
+- Monthly statements showing holdings, valuations, NAV, returns
+- Quarterly performance review comparing portfolio return vs. benchmark indices
+- Annual tax-reporting statement (P&L, capital gains, dividend summary)
+- Benchmark comparison: Sensex 50 (equity), CRISIL Composite Debt (debt portion)
+
+4.3 Review Triggers & Mandatory Rebalancing
+- Material change in customer's risk profile: Immediate review and rebalancing
+- Significant market event (>15% market movement): Review within 7 days
+- Customer-initiated request: Honored within 10 business days (subject to fees if >2 per quarter)
+
+SECTION 5: SUITABILITY & PRODUCT RESTRICTIONS
+5.1 Suitability-Based Recommendations
+Products recommended based on documented risk profile:
+- Very Conservative: Max 20% equities, 80% debt/cash
+- Conservative: Max 40% equities, 60% debt/cash
+- Moderate: 50-60% equities, 40-50% debt
+- Growth-Oriented: 70-80% equities, 20-30% debt
+- Aggressive: 85%+ equities, 15% alternatives/cash
+
+5.2 Product Restrictions for Specific Risk Profiles
+- Derivatives/hedging options: Restricted to Growth-Oriented & Aggressive profiles
+- Small-cap/penny stocks: Restricted to Aggressive profile; max 10% of portfolio
+- Structured products: Only for Moderate+ profiles; capped at 15% of portfolio
+- Leverage/margin: Not available for Conservative profiles; max 25% leverage for Premier+
+
+5.3 Mandatory Hold & Cooling-Off Period
+- High-volatility equity holdings (small-cap, sector concentrated): Minimum 12-month hold recommended
+- Alternative investments: 5-7 year lock-in; no redemption permitted
+- Customer may exit cooling-off period (3 business days) with full refund if documented unsuitable recommendation
+
+SECTION 6: LIQUIDITY & WITHDRAWAL POLICY
+6.1 Withdrawal Options
+- Partial withdrawal (25% of portfolio): Processed within 5 business days; no penalty
+- Full liquidation: Processed within 10 business days; subject to ongoing fee prorating
+- Systematic withdrawal plan (SWP): Up to 5% per annum; minimum amount 10,000 INR per withdrawal
+
+6.2 Lock-in Instruments (No Early Withdrawal)
+- Fixed Deposits: Subject to FD lock-in terms (early withdrawal: 0.5% penalty + lost interest)
+- Infrastructure bonds: 10+ year tenure; early exit via secondary market only
+- Alternative investments: Locked per fund terms; no primary market redemption
+
+6.3 Forced Liquidation (Portfolio Freeze)
+Portfolio may be frozen (no new purchases, limited to essential withdrawals for living expenses) if:
+- Asset management fees unpaid >30 days
+- Customer-initiated suspension request (up to 6 months)
+- Regulatory compliance flags or court-ordered attachment
+- Absence of annual KYC update (>12 months since last verification)
+
+SECTION 7: COMPLIANCE, GRIEVANCE & TERMINATION
+7.1 Portfolio Termination
+- Customer-initiated: 30-day notice required; final fees assessed on last day
+- Meridian-initiated: 60-day notice for regulatory non-compliance; 90-day notice if AUM falls below minimum thresholds
+- Final settlement: All holdings liquidated per market conditions; proceeds remitted within 15 days
+
+7.2 Grievance & Dispute Resolution
+- Investment suitability complaints: Review completed within 30 days by compliance officer
+- Performance/return complaints: Reviewed against benchmark; if systematic underperformance documented, fee rebate offered
+- Ombudsman escalation: Available after 60 days of internal resolution attempt
+- Arbitration clause applies for disputes exceeding 10,00,000 INR
+
+7.3 SEBI & Regulatory Compliance
+- All investment advisory services comply with SEBI (Investment Advisers) Regulations, 2013
+- Portfolio custodian: Separate custodian arrangement per regulatory requirements
+- Conflict of interest disclosure: Available upon request for all proprietary products recommended

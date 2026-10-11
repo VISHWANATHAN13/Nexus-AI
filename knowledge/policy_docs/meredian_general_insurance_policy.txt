@@ -1,0 +1,114 @@
+MERIDIAN FINANCIAL GROUP - GENERAL INSURANCE POLICY MASTER TERMS
+Policy Period: Annual (Renewable) | Effective Date: 2026-01-01
+
+SECTION 1: POLICY OVERVIEW
+This Master General Insurance Policy covers personal assets, liabilities, and specific contingencies as selected by the policyholder. Coverage is underwritten by Meridian Insurance Limited and is subject to annual renewal pending no material change in risk profile.
+
+SECTION 2: PREMIUM PAYMENT TERMS
+2.1 Payment Methods & Schedules
+- Annual payment: Due on or before policy commencement date (full premium upfront)
+- Half-yearly payment: Allowed with 2% convenience surcharge per installment
+- Monthly payment: Available via auto-debit mandate; 3.5% surcharge applied
+- Late payment: 15-day grace period; premium lapses and coverage ceases if payment not received within grace period
+
+2.2 Auto-Debit Authorization
+- Policyholders may authorize auto-debit from savings/current accounts for premium payment
+- Authorization requires signed mandate or e-signature verification
+- Auto-debit attempts on the 1st of every payment month; if failed, retry on 15th
+- Two consecutive failed auto-debit attempts result in policy lapse
+
+2.3 Payment Restrictions
+- Post-dated cheques not accepted; only current-date instruments honored
+- No payment accepted via third-party accounts without explicit written authorization from policyholder
+- Refund of overpayment processed within 30 days to original payment method
+
+SECTION 3: COVERAGE SCENARIOS & INCLUSIONS
+3.1 Home Insured Property Coverage
+- Structure damage due to fire, lightning, explosion, riot, terrorism, earthquake (optional rider)
+- Theft, burglary, and housebreaking
+- Accidental damage to fixed electrical/plumbing installations
+- Coverage limit: Up to 95% of declared property value; deductible 1% per claim (minimum 10,000 INR)
+
+3.2 Personal Liability Coverage
+- Third-party bodily injury liability: Up to 25,00,000 INR per occurrence
+- Third-party property damage liability: Up to 10,00,000 INR per occurrence
+- Legal defense costs covered within policy limit
+- Does NOT cover liability arising from criminal acts, professional negligence, or contractual assumption
+
+3.3 Contents & Movables Coverage
+- Household furniture, appliances, personal effects
+- Jewelry and valuables: Separate sub-limit of 5,00,000 INR; requires itemized list and appraisal
+- Outdoor gardens/landscaping: Optional rider with capped coverage
+- Coverage limit subject to 75% of replacement value; deductible 5% per claim
+
+3.4 Accidental Death & Disability (Optional Rider)
+- Accidental death benefit: 25,00,000 INR flat
+- Permanent total disability benefit: 25,00,000 INR
+- Permanent partial disability: Scheduled benefits (loss of limb/sight: 50% of benefit; loss of hearing: 25%)
+- Applicable only to named insured and spouse (if added)
+
+SECTION 4: EXCLUSIONS & LIMITATIONS
+4.1 Absolute Exclusions (No Coverage)
+- Damage due to war, civil unrest, or acts of terrorism (unless specific rider purchased)
+- Damage due to customer's intentional acts or gross negligence
+- Coverage lapses if property unoccupied for more than 90 consecutive days
+- Damage from faulty workmanship or design defects known at inception
+- Losses arising from non-compliance with safety regulations or building codes
+
+4.2 Conditional Exclusions (Sub-limit or Enhanced Deductible)
+- Theft from unlocked premises: Subject to enhanced deductible of 10,000 INR
+- Flood and waterlogging: Optional rider; if not purchased, zero coverage; if purchased, capped at 50% of property value
+- Electrical breakdown: Optional rider; zero coverage in base policy
+- Cybercrime/identity theft: Separate cyber insurance policy required; excluded from general policy
+
+4.3 Loss of Coverage Triggers
+- Policy lapses immediately upon material misrepresentation discovered during claim investigation
+- Coverage void for claims filed after 90 days of loss discovery
+- No coverage if policyholder has unpaid premiums exceeding 60 days
+
+SECTION 5: CLAIMS PROCESS & SETTLEMENT
+5.1 Claim Filing Requirements
+- Notification to insurer within 14 days of incident (30 days for theft/burglary involving police investigation)
+- Claimant must provide: Claim form (signed), police FIR (for theft/criminal loss), photos of damage, receipts/invoices
+- For third-party liability claims, written notice from third party or legal notice required within 30 days
+
+5.2 Claim Investigation & Assessment
+- Loss assessor engaged within 7 days of valid claim notification
+- Assessment completed within 30 days (60 days for complex cases requiring forensic analysis)
+- Claimant may request independent survey at own cost (difference resolved via arbitration)
+
+5.3 Claim Settlement Timelines
+- Approved claims settled within 30 days of final assessment and agreement on amount
+- Partial claims (where multiple items damaged) paid on schedule basis; settlement of individual items as investigation completes
+- Denied claims require detailed explanation in writing within 15 days of investigation conclusion
+
+5.4 Settlement Amount Calculation
+- Indemnity principle applies: Claim paid is the least of (a) actual loss, (b) policy limit, (c) insurable value
+- Depreciation applied on movables: 5% per annum (maximum 50% depreciation cap)
+- Replacement cost basis for structure damage if rebuilt within 18 months of loss
+
+SECTION 6: POLICY MODIFICATIONS & ENDORSEMENTS
+6.1 Coverage Add-ons (Riders)
+Available riders with separate premiums:
+- Earthquake coverage: +15% of base premium
+- Flood coverage: +8% of base premium
+- Accidental death/disability: +2.5% of base premium
+- Cyber insurance: Separate policy required; not available as rider
+
+6.2 Coverage Reductions & Cancellations
+- Policyholders may reduce coverage or cancel riders with 30-day written notice; pro-rata refund issued
+- Mid-term cancellation by insurer: Requires 60-day notice; full pro-rata refund issued
+- Cancellation effective end of notice period; claims filed after cancellation date rejected
+
+SECTION 7: REGULATORY & GRIEVANCE PROVISIONS
+7.1 Ombudsman & Dispute Resolution
+- Internal complaint resolution within 14 days for straightforward grievances
+- Escalation to Insurance Ombudsman available after 30 days of unsatisfactory internal response
+- Ombudsman has authority to award compensation up to 30,00,000 INR
+- All claims disputes subject to Indian Insurance Act, 1938 and subsequent amendments
+
+7.2 IRDAI Compliance
+- This policy issued under license from Insurance Regulatory & Development Authority of India
+- Policy document available in English and regional languages upon request
+- Grievance redressal email: grievances@meridianinsurance.com
+- Toll-free helpline: 1800-121-2020 (24/7 availability)

@@ -1,0 +1,165 @@
+# Phrase patterns (regex, case-insensitive) that mark a HARD escalation category regardless of how the request is worded.
+# The Classifier LLM also extracts a category; the stricter of the two wins. Edit here, not in code.
+#
+# Text is normalised first (NFKC, zero-width characters removed, curly apostrophes made straight, whitespace collapsed).
+# Two kinds of signal per category:
+#   * <category>:   a list of "strong" patterns - one match is enough.
+#   * pairs.<category>: co-occurrence rules - pattern `a` and pattern `b` must both appear within `window` characters
+#                       (either order). They catch rephrasings no single phrase list can enumerate.
+# Honest limit: regex coverage is finite. This list is the deterministic BACKSTOP; recall is measured by
+# tests/data/escalation_rephrasings.yaml (tests/test_hardening.py) and human review remains the final safety net.
+safeguarding_concern:
+  - |-
+    \b(?:forc(?:ing|ed)|pressur(?:ing|ed)|coerc(?:ing|ed)|threaten(?:ing|ed)|controlling|blackmail\w*) (?:me|my)\b
+  - |-
+    forced me to|being coerced|not allowed to (?:access|use|see|spend) my (?:own )?(?:money|account|card)
+  - |-
+    (?:afraid|scared|frightened) of|\babus(?:e|ed|ive|er)\b|domestic (?:violence|abuse)|elder(?:ly)? abuse
+  - |-
+    exploit(?:ed|ing) me|taking (?:my|all my) (?:money|pension|savings)|someone (?:is )?(?:taking|stealing|controlling)
+  - |-
+    (?:my|an) (?:elderly|vulnerable) (?:mother|father|parent|relative|neighbou?r)
+  - |-
+    \bfrighten\w*|\bterrified\b|\bintimidat\w+|\bharass(?:ed|ing|ment)\b
+  - |-
+    \b(?:tell(?:s|ing)|told|ask(?:s|ed|ing)|making|forcing|pressuring|pushing) me to (?:hand over|give|share|reveal|disclose|send|read out) (?:my |her |his |the )?(?:card|pin|password|otp|cvv|details|passbook|cheque ?book)
+  - |-
+    \b(?:gave|shared|told|handed|read out)\b[^.\n]{0,25}\b(?:otp|pin|password|cvv|card details)\b
+  - |-
+    \bcontrols? (?:all )?(?:of )?my (?:money|accounts?|finances|bank|salary|cards?)|won'?t (?:give|let) me (?:any )?(?:access|see|use|check|have)|can'?t leave the house
+  - |-
+    \bscamm?ed\b|being (?:defrauded|conned|tricked|duped)|(?:romance|investment|lottery) scam
+  - |-
+    \b(?:without my (?:approval|permission|knowledge|consent)|keep (?:it|this|that)(?: transaction)? (?:a )?secret|keep (?:it|this) from|don'?t tell (?:anyone|anybody)|if i tell anyone|(?:he|she|they|someone|\w+) (?:has|have|holds?) power of attorney|(?:doesn'?t|won'?t|does not|will not) (?:allow|let) me|deletes? my (?:bank )?(?:messages?|statements?|alerts?)|(?:logging|logged|log) in(?:to)? (?:to )?my (?:net ?banking|account|online)|(?:withdrawals?|transfers?) (?:that )?i (?:don'?t|do not|did not|didn'?t) (?:recogni[sz]e|make|authori[sz]e)|unauthori[sz]ed (?:withdrawals?|transactions?)|asked for my (?:account|card|pin|otp|password)|(?:keeps?|keep) asking for my (?:card|pin|otp|password)|bail money|cut me off)\b
+  - |-
+    \b(?:making|pushing|pressing|urging|telling) me to (?:take|put|invest|withdraw|transfer|move)\b|\bmaking me (?:take|withdraw)\b|\bcare home\b|\bgrandson\b[^.\n]{0,30}\b(?:jail|arrested|accident|hospital)\b
+  - |-
+    \b(?:safe account|(?:holds?|keeps?|has|took|takes) (?:my )?(?:bank |debit |credit |atm )?card and|takes? what (?:he|she|they) wants|manipulat\w+|pay (?:a |an )?(?:fee|tax|charge)\b[^.\n]{0,15}\bfirst|already sent (?:some )?(?:money|cash)|(?:afraid|scared|nervous) to (?:confront|tell|say)|(?:using|uses|used) my (?:net ?banking|online banking|bank account)|asks? (?:her|him|them|me) for cash)\b
+financial_hardship:
+  - |-
+    can'?t (?:afford|pay|keep up|make)|cannot (?:afford|pay)|unable to (?:pay|afford|meet)
+  - |-
+    lost (?:my |our )?(?:job|income|work)|laid off|made redundant|redundan\w+
+  - |-
+    struggl\w+ (?:to pay|financially|with (?:payments|bills|money))|financial(?:ly)? (?:hardship|difficult\w*|trouble)
+  - |-
+    behind on (?:my |our )?(?:payments?|premiums?|emis?|rent|bills)|missed (?:several |multiple |a few )?payments?
+  - |-
+    in debt|debt trouble|bankrupt\w*|make ends meet|hard time paying|payment holiday
+  - |-
+    money(?:'s| is| has been)? (?:very |a bit |really |pretty |rather )?(?:tight|short)|tight on money|cash[- ]strapped|short on (?:cash|money)
+  - |-
+    finances? (?:are|is|have been) (?:very |a bit |really )?(?:tight|stretched|strained)|stretched thin|paycheck to paycheck
+  - |-
+    (?:not able|unable|struggling|having trouble|have trouble|having difficulty|difficulty|trouble) (?:to |in |with )?(?:paying|pay|afford|cover|meet|keep up|keeping up|manage|managing)\b
+  - |-
+    can'?t (?:find|come up with|raise|scrape)\b[^.\n]{0,15}\b(?:cash|money|funds)|(?:don'?t|do not) have (?:the |enough )?(?:money|cash|funds)\b|\bno (?:money|cash|funds)\b|running out of (?:money|cash|funds)
+  - |-
+    \bout of (?:a )?(?:work|job)\b|\bunemploy\w+|\bjobless\b|\blaid[- ]?up\b|\blay-?offs?\b|\bno (?:income|salary|job)\b
+  - |-
+    \b(?:hours|salary|pay|income|wages?|earnings|business|sales)\b[^.\n]{0,20}\b(?:cut|reduced|dropped|fallen|halved|slashed|stopped|closed|shut)\b
+  - |-
+    \b(?:haven'?t|have not|not) (?:had|received|got|been paid)\b[^.\n]{0,15}\b(?:paycheck|salary|pay|wages?|income)\b|\b(?:closed|shut down|lost) (?:my|our) (?:business|shop)\b|surviving on (?:my |our )?savings
+  - |-
+    \b(?:money|financial|cash) (?:trouble|troubles|problems?|worries|issues|crisis|strain|pickle|difficulties|woes)\b|\bin a (?:bit of a )?(?:pickle|tight spot|bind)\b|\bskint\b|\bpenniless\b|\bbroke\b
+  - |-
+    drowning in[^.\n]{0,20}(?:bills|debts?|loans?|payments?)|owe more than i (?:earn|make)|(?:minimum|monthly) payments? (?:are )?killing me|\bin arrears\b|\barrears\b
+  - |-
+    \b(?:retrench\w*|between jobs|evict\w*|foreclos\w*|repossess\w*|insolven\w*|destitute|homeless|(?:medical|hospital|treatment|surgery|dialysis) (?:costs?|bills?|expenses?)|eaten (?:up )?(?:all )?(?:of )?(?:our|my) savings|(?:account|wallet|pocket)s? (?:is |are )?(?:nearly|almost|practically) empty|too heavy for (?:us|me)|crushing (?:me|us)|living expenses|nothing (?:left )?to pay|only the minimum|washed away|lost everything)\b
+  - |-
+    \b(?:dues|instal+ments?|premiums?|emis?|repayments?|payments?)\b[^.\n]{0,40}\b(?:overdue|unaffordable|heavy|too much|too high|piling up|pile up|unmanageable|beyond (?:us|me))\b|\b(?:overdue|unaffordable|unmanageable)\b[^.\n]{0,30}\b(?:dues|instal+ments?|premiums?|emis?|repayments?|payments?)\b
+  - |-
+    \b(?:borrow(?:ed|ing)? (?:money )?from (?:friends|family|relatives)|falling behind|getting out of hand|living on credit|maxed out)\b
+  - |-
+    \b(?:unpaid leave|pay (?:has been |was |is )?delayed|(?:hit|hurt) (?:very )?hard|(?:bad|difficult|terrible|dire) (?:financial )?(?:situation|circumstances)|hold off on collecting|(?:becoming|become|is|are) (?:a |an )?(?:problem|burden|struggle)|spiral\w*|food on the table|(?:need|want|give me) (?:some |more |extra )?time (?:on|to pay|for) (?:the |my )?(?:payments?|premiums?|emis?|instal+ments?|loan))\b
+compliance_override_request:
+  - |-
+    \b(?:skip|bypass|waive|override|circumvent|get around|avoid)\b[^.\n]{0,25}\b(?:kyc|verification|id check|identity check|compliance|checks?|limits?|approval|two-factor|2fa|authenti\w+|screening)\b
+  - |-
+    without (?:any )?(?:kyc|verification|id check|identity check|approval|checks)
+  - |-
+    don'?t (?:need|have) to (?:verify|check)|no questions asked|off the record
+  - |-
+    make an exception[^.\n]{0,40}(?:limit|kyc|verification|check)
+  - |-
+    \bwithout (?:going through |having to (?:go through|do) )?(?:the |any )?(?:usual |normal |proper |required |extra )?(?:kyc|verification|id\b|identity|checks?|approval|authori[sz]ation|otp|compliance|consent|permission|paperwork)
+  - |-
+    \bwithout (?:telling|informing|notifying|asking|consulting)\b
+  - |-
+    \b(?:turn(?:ing)? off|disabl\w+|remov\w+|switch(?:ing)? off|cancel\w*|drop\w*|stop)\b[^.\n]{0,25}\b(?:otp|2fa|two[- ]factor|extra (?:otp )?(?:step|check)|fraud alerts?|authentication|verification|security (?:check|step))\b
+  - |-
+    \b(?:otp|2fa|two[- ]factor|verification|authentication)\b[^.\n]{0,25}\b(?:removed|disabled|turned off|waived|dropped|skipped)\b
+  - |-
+    (?:don'?t|do not) have (?:my |the )?(?:id|identification|documents?|passport|kyc)\b[^.\n]{0,40}\b(?:anyway|still|process|proceed|go ahead)
+  - |-
+    \bback-?dat(?:e|ed|ing)\b|\bi'?ll take (?:full )?responsibility\b|\bbeyond (?:the )?(?:normal|usual|standard|set|daily|allowed)\b[^.\n]{0,15}\b(?:limit|cap)\b
+  - |-
+    \b(?:verify|verification|kyc|checks?|documents?|paperwork)\b[^.\n]{0,25}\b(?:later|afterwards?|tomorrow|next week)\b|\b(?:later|afterwards?)\b[^.\n]{0,15}\b(?:verify|verification|kyc|checks?)\b
+  - |-
+    \b(?:pretend|quietly|secretly|backdoor|already (?:been )?(?:cleared|approved|verified)|skips? (?:the )?(?:manual )?(?:review|screening|checks?)|don'?t run (?:your|the) (?:usual |normal )?(?:screening|checks?|review)|(?:daily |transfer |withdrawal )?limit\b[^.\n]{0,25}\bunlimited|unlimited (?:daily |transfer )?limits?|(?:take|remove|lift|clear) the [\w -]{0,20}\b(?:flag|hold|block)\b|before the (?:credit )?committee|without (?:my |the )?(?:co-?owner|co-?holder|other holder)\w*|old signature|(?:don'?t|do not) send me the otp|approve (?:the )?login from your side|(?:bring|send|provide|submit) (?:the |my )?[\w ]{0,20}(?:form|documents?|paperwork|id|proof) later)\b
+  - |-
+    \b(?:override (?:it|this|that|the (?:limit|maximum|cap|block|hold))|(?:mark|set|record|show) (?:my )?(?:kyc|verification|documents?|id|checks?)\b[^.\n]{0,20}\b(?:complete|done|verified|cleared|approved)|(?:take|remove|lift|turn) (?:off )?(?:the )?(?:extra )?(?:authentication|verification|otp|security)\b[^.\n]{0,15}\boff\b|(?:without|before) (?:the |any )?(?:income |supporting )?(?:documents?|proof)|\bprovide (?:them|it|the proof) eventually)\b
+  - |-
+    \b(?:mark (?:it|this|that) (?:as )?(?:done|complete|completed|verified)|(?:switch|turn) off (?:the |my )?(?:sms|email|push)? ?(?:confirmation|alert|notification)s?|(?:sort|do|handle|fix) (?:out )?(?:the )?(?:documentation|documents|paperwork|formalities) (?:after|later|afterwards)|bypass (?:the )?(?:cooling[- ]off|waiting|holding) period|(?:do not|don'?t) notify|without (?:reporting|declaring|flagging|disclosing)|(?:override|lift|remove) the hold|accept all the risk|(?:don'?t|do not) want to do (?:the )?(?:video )?(?:kyc|verification))\b
+pairs:
+  safeguarding_concern:
+    - window: 90
+      a: |-
+        \b(?:son|daughter|husband|wife|partner|brother|sister|uncle|aunt|nephew|niece|carer|caregiver|caretaker|nurse|neighbou?r|stranger|someone|somebody|relative|friend|flatmate|landlord|boss|in[- ]laws?|daughter in law|son in law|he|she|they)\b
+      b: |-
+        \b(?:takes?|taking|took|steal\w*|stole|drain\w*|misus\w+|empt(?:y|ies|ied|ying)|withdraw\w*|uses|using|siphon\w*)\b[^.\n]{0,25}\b(?:my|the) (?:own )?(?:money|cash|salary|pension|savings|account|funds?|inheritance|wages?|earnings|debit card|credit card|card|pin|password)\b
+    - window: 90
+      a: |-
+        \b(?:son|daughter|husband|wife|partner|brother|sister|uncle|aunt|nephew|niece|carer|caregiver|caretaker|nurse|neighbou?r|stranger|someone|somebody|relative|friend|flatmate|landlord|boss|in[- ]laws?|daughter in law|son in law)\b
+      b: |-
+        \b(?:makes?|made|forc\w+|pressur\w+|insists?|demands?|says?|said)\b[^.\n]{0,25}\b(?:i|me)\b[^.\n]{0,30}\b(?:sign|transfer|hand over|give|sell|share|withdraw|change)\b|\bor else\b|\bhas my (?:debit |credit |atm )?(?:card|pin|password|cheque ?book|passbook)\b|\bopened (?:an? )?(?:account|loan|card)\b[^.\n]{0,20}\b(?:in|under) my name\b
+
+    # ---- broader, lower-precision cues
+    - window: 120
+      a: |-
+        \b(?:step-?(?:son|daughter|father|mother)|son|daughter|husband|wife|partner|boyfriend|girlfriend|ex|brother|sister|uncle|aunt|nephew|niece|dad|father|mum|mom|mother|carer|caregiver|caretaker|nurse|neighbou?r|stranger|someone|somebody|relative|family member|friend|flatmate|landlord|boss|in[- ]laws?|person who helps|caller|company)\b
+      b: |-
+        \b(?:all my (?:cards?|savings|money)|(?:don'?t|do not|can'?t|cannot) (?:get to )?(?:see|access|use|check)[^.\n]{0,20}(?:statements?|account|card|money|online banking)|(?:insists?|demand\w*|asked|asking|convinced|persuad\w+|getting (?:her|him|me|them)) (?:on |me |her |him |them )?(?:to |being )?(?:[^.\n]{0,30})(?:sign|send|pay|change my nominee|nominee|hand over|present|answer)|taken advantage|savings (?:keep )?disappear\w*|dementia|gets angry|checks every|can'?t say no|not safe|pretending|used my (?:card|details|account|name)|access to my (?:online|bank|account)|took out a loan|read (?:them )?the code|release my inheritance|lottery|move my money without)\b
+  financial_hardship:
+    - window: 80
+      a: |-
+        \b(?:emis?|premiums?|loans?|mortgage|rent|bills?|instal+ments?|repayments?|overdraft|credit[- ]card|payments?|sip|fees)\b
+      b: |-
+        \b(?:worr(?:y|ied|ies|ying)|struggl\w+|difficult\w*|tough|stress\w*|anxious|drowning|killing me|burden|default\w*|behind)\b
+    - window: 70
+      a: |-
+        \b(?:passed away|died|death|bereave\w*|widow\w*)\b
+      b: |-
+        \b(?:income|emis?|loan|mortgage|premiums?|rent|bills|expenses)\b
+    - window: 70
+      a: |-
+        \b(?:defer|postpone|delay|extend|reschedule|pause|skip|hold)\b[^.\n]{0,20}\b(?:premium|emi|payment|instal+ment|sip|repayment|due date)\b
+      b: |-
+        \b(?:because|since|due to|after|but)\b[^.\n]{0,40}\b(?:money|cash|job|income|salary|work|afford|short|tight|sick|ill|hospital|medical|bills|debt|rent|emergency)\b
+
+    # ---- broader, lower-precision co-occurrence cues (a false positive routes to a human, which is the safe direction)
+    - window: 110
+      a: |-
+        \b(?:loans?|emis?|mortgage|rent|bills?|dues|instal+ments?|repayments?|collectors?|overdraft|credit[- ]card|debts?|arrears|premiums?|policy|sip|fees|food|groceries|utilities|fuel)\b
+      b: |-
+        \b(?:nothing left|bad place|falling behind|out of hand|rough (?:few )?(?:months?|time|patch)|choos\w+ between|borrow\w*|collapsed|shut(?: down)?|laid|(?:ill|sick|unwell|hospital\w*|medical)|(?:not|n'?t) (?:been )?credited|(?:unable|not able|can'?t|cannot|couldn'?t) (?:to )?(?:keep|maintain|service|sustain|continue|find|pay|cover|manage|meet|afford|continue)|(?:lost|losing) (?:my|our|the|main)|main (?:source of )?income|sell my|only earner|breathing room|restructur\w+|notice of default|calls? from|keep paying)\b
+  compliance_override_request:
+    - window: 80
+      a: |-
+        \b(?:push|let|put|get) (?:it|this|that|the \w+|this \w+) through\b|\b(?:approve|process|release|authori[sz]e|complete|clear)\b[^.\n]{0,15}\b(?:it|this|that|the (?:transfer|payment|transaction|request|claim))\b
+      b: |-
+        \b(?:anyway|regardless|just this once|don'?t bother|no need|bother with|first and|before (?:the )?(?:checks?|verification|kyc))\b
+    - window: 80
+      a: |-
+        \b(?:manager|supervisor|boss|relationship manager|branch (?:head|manager)|director|friend)\b
+      b: |-
+        \b(?:it'?s|its|that'?s|is|was|been) (?:fine|ok|okay|alright|approved|allowed|sorted)\b|\bno need\b|\bwaive\w*|\bexception\b|\boverride\b
+
+    # ---- broader, lower-precision cues
+    - window: 100
+      a: |-
+        \b(?:activate|approve|authori[sz]e|release|process|sign off|mark|edit|change|raise|increase|lift|take off|remove|ignore|override|waive|skip|flag|hold|handle|keep)\b
+      b: |-
+        \b(?:(?:just|for now|for this client|eventually|later|quietly|without)\b[^.\n]{0,40}\b(?:verification|kyc|screening|documents?|proof|compliance|audit|sanctions?|authentication|formally|confirm\w*|calls?)|compliance desk|sanctions? check|audit trail|risk team|(?:extra|additional) (?:screening|authentication|checks?)|supporting document|income documents|video verification|don'?t (?:hold|flag|report)|no need to (?:call|confirm|verify)|under my (?:brother|sister|friend|wife|husband)'?s name|apply formally|system side|even though the policy lapsed|lapsed)\b
+# order = priority when several match
+priority: [safeguarding_concern, financial_hardship, compliance_override_request]

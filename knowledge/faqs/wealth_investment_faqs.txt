@@ -1,0 +1,270 @@
+MERIDIAN FINANCIAL GROUP - WEALTH & INVESTMENT PRODUCTS FAQs
+Last Updated: 2026-01-01
+
+SECTION 1: WEALTH PORTFOLIO ACCOUNT BASICS
+
+Q1.1: What is the minimum amount to open a wealth portfolio account with Meridian?
+A: Meridian offers three portfolio tiers:
+- Classic Portfolio: Minimum 5,00,000 INR; 0.75% asset management fee
+- Premier Portfolio: Minimum 25,00,000 INR; 0.50% asset management fee + dedicated advisor
+- Elite Portfolio: Minimum 1,00,00,000 INR; 0.35% asset management fee + personalized wealth strategy
+
+Q1.2: What is the difference between the three wealth tiers?
+A: 
+- Classic: Standard investment options, quarterly reviews, online access
+- Premier: All of Classic + dedicated relationship manager, quarterly reviews + annual strategy meeting, tax planning, priority customer service
+- Elite: All of Premier + personalized wealth strategy, annual comprehensive financial plan, complimentary tax-loss harvesting, monthly performance calls, access to alternative investments
+
+Q1.3: What is a risk profile, and why is it important?
+A: Your risk profile is an assessment of your ability and willingness to tolerate investment fluctuations. It determines your optimal asset allocation and investment recommendations. Meridian profiles investors into five categories: Very Conservative, Conservative, Moderate, Growth-Oriented, and Aggressive. Your risk profile is documented during account opening and cannot be changed frequently (60-day review period required).
+
+Q1.4: Can I change my portfolio allocation after opening an account?
+A: Yes, you can request changes to your asset allocation. Rebalancing is triggered automatically when any asset class deviates >10% from target allocation. Manual rebalancing requests are honored within 10 business days (subject to fees if >2 per quarter). Significant changes in your risk profile require documentation and a 60-day review period.
+
+Q1.5: What does "asset management fee" mean?
+A: Asset management fee is the annual charge (percentage of your portfolio value) Meridian charges for managing your investments. For example, a 0.75% fee on a 10 lakh INR portfolio = 7,500 INR annually, charged quarterly (1,875 INR per quarter). This fee is deducted from your cash holdings or liquid funds.
+
+Q1.6: Are there any charges beyond the asset management fee?
+A: Yes, additional charges include:
+- Additional rebalancing: 2,500 INR per event (after 2 free per quarter)
+- Mutual fund switch: 500 INR per switch (6 free per quarter)
+- Withdrawal within 12 months: 1% redemption charge
+- Tax-loss harvesting (Elite only): 10,000 INR per quarter
+- Advisory consultation (off-cycle): 5,000 INR per hour (complimentary for Premier+)
+
+SECTION 2: INVESTMENT OPTIONS & ASSET ALLOCATION
+
+Q2.1: What investment options are available in a wealth portfolio?
+A: Available options include:
+- Direct Equity: Blue-chip stocks, mid-cap and small-cap equities
+- Mutual Funds: Equity, debt, balanced, index funds, sector-focused
+- Fixed Income: Government securities, corporate bonds, bond mutual funds, FDs
+- Alternative Investments: REITs, infrastructure bonds, gold ETFs, sovereign gold bonds
+- International Investments: Offshore funds (Elite tier only)
+
+Q2.2: What is an asset allocation model, and which one should I choose?
+A: Asset allocation models are pre-defined investment blueprints matching your risk profile:
+- Equity-Heavy (Aggressive): 70% equities, 20% debt, 10% alternatives
+- Balanced Growth (Growth-Oriented): 50% equities, 40% debt, 10% alternatives
+- Income-Focused (Conservative): 30% equities, 60% debt, 10% cash
+- Capital Preservation (Very Conservative): 10% equities, 70% debt, 20% cash
+
+Your assigned risk profile determines the recommended allocation. Deviations require suitability documentation.
+
+Q2.3: What is rebalancing, and how often does it happen?
+A: Rebalancing is adjusting your portfolio back to target allocation when market movements cause deviations. Meridian automatically rebalances when any asset class deviates >10% from target. Quarterly reviews are conducted at end of each quarter (March, June, September, December). Rebalancing occurs within 5 business days of approval.
+
+Q2.4: Can I have equity holdings if I'm in the Conservative risk profile?
+A: Yes, Conservative profiles are typically allocated 30-40% equities (for inflation protection). However, these equities are usually blue-chip dividend-yielders, not volatile small-caps. High-volatility stocks are restricted to Growth-Oriented and Aggressive profiles only. Your advisor can explain the specific rationale for any equity allocation in your portfolio.
+
+Q2.5: What are mutual funds, and why are they recommended for smaller amounts?
+A: Mutual funds pool investor money to buy a diversified portfolio of securities, managed by professionals. They're recommended because:
+- Diversification with smaller amounts (starting 5,000 INR)
+- Professional management and lower costs
+- Tax efficiency through fund strategies
+- Better suited for hands-off investors
+- Easy entry and exit compared to direct equity
+
+Q2.6: What is the difference between actively managed and passively managed funds?
+A: Active funds: Manager picks stocks/bonds attempting to outperform market benchmarks. Higher expense ratio (0.8-1.5%), but potential for higher returns. Example: Meridian Bluechip Equity Fund (0.80% expense ratio).
+
+Passive funds: Replicate benchmark indices (e.g., Sensex 50). Lower expense ratio (0.15-0.30%), returns match benchmarks. Example: Meridian Index Fund Sensex50 (0.25% expense ratio).
+
+SECTION 3: MUTUAL FUNDS & EQUITY INVESTMENTS
+
+Q3.1: What are the different types of mutual funds available?
+A: Common types include:
+- Index Funds: Track market indices (Sensex, Nifty)
+- Equity Funds: Large-cap (stable), mid-cap (moderate growth), small-cap (high growth but volatile)
+- Balanced Funds: Combination of equities and debt
+- Debt Funds: Government securities, corporate bonds, money market instruments
+- Sector Funds: Concentrated in specific sectors (Technology, Infrastructure, Healthcare)
+- International Funds: Exposure to foreign markets (Elite tier only)
+
+Q3.2: What is the minimum investment in a mutual fund?
+A: Minimum initial investment is typically 5,000 INR with minimum subsequent investments of 1,000 INR. However, in portfolio accounts, Meridian may have higher minimums. Systematic Investment Plans (SIPs) start from 500 INR per month for eligible funds.
+
+Q3.3: What is the exit load, and when does it apply?
+A: Exit load is a charge levied when you redeem/sell mutual fund units. Meridian funds typically have:
+- Exit load if held <12 months: 1% of redemption value
+- Exit load if held >12 months: Nil
+Example: Redeeming 1 lakh INR worth of units held for 8 months = 1,000 INR charge; amount received = 99,000 INR
+
+Q3.4: What are dividends and how do they work in mutual funds?
+A: Dividends are portions of fund earnings distributed to investors. Options include:
+- Dividend payout: Money credited to your account
+- Dividend reinvestment: Dividend automatically buys more fund units, compounding your returns
+Dividend payouts are typically quarterly or annual depending on fund scheme. Tax treatment varies (dividend distribution tax may apply).
+
+Q3.5: What is a Systematic Investment Plan (SIP), and is it suitable for me?
+A: SIP is a disciplined way to invest fixed amounts regularly (monthly, quarterly). Benefits:
+- Rupee-cost averaging: You buy more units when prices are low, fewer when prices are high
+- Discipline: Enforced regular investing prevents market timing mistakes
+- Flexibility: Can pause or stop SIP with 30-day notice
+- Small amounts: SIPs start from 500 INR per month
+Suitable for: Young professionals, salaried employees, anyone wanting automatic discipline
+
+Q3.6: How are mutual fund returns calculated and reported?
+A: Returns are typically calculated as Compound Annual Growth Rate (CAGR) over specified periods (1-year, 3-year, 5-year returns). Meridian's monthly statements show:
+- Portfolio return (YTD): Performance from start of calendar year
+- Benchmark comparison: How your portfolio compares to relevant indices
+- Cost: Total fees and charges deducted
+Example: If you invested 1 lakh on Jan 1 and it grows to 1.15 lakh by Dec 31 = 15% YTD return
+
+SECTION 4: FIXED INCOME & DEBT INSTRUMENTS
+
+Q4.1: What are Government Securities (G-secs), and are they safe?
+A: G-secs are debt instruments issued by the Government of India. They're considered the safest investments (backed by sovereign guarantee). Available tenures: 2 years to 30 years. Current yields: 5.2-6.8% p.a. depending on tenure. Risk: Minimal default risk, but interest rate risk exists (if you sell before maturity in a rising rate environment, you may get lower price).
+
+Q4.2: What is the difference between Government Securities and Corporate Bonds?
+A:
+Government Securities: Issued by government; virtually no default risk; lower interest rate (5-7%). Example: 10-year G-sec at 6.5% yield.
+Corporate Bonds: Issued by companies; default risk present; higher interest rate (7-10%). Example: 10-year AAA-rated corporate bond at 8.5% yield.
+Trade-off: Higher yield from corporates, but with company default risk. Meridian only recommends AA+ and above rated bonds.
+
+Q4.3: What is the interest rate risk on fixed income investments?
+A: Interest rate risk occurs when you sell a bond before maturity in a changed interest rate environment. Example:
+- You buy 10-year G-sec at 6% yield (price = 100 INR)
+- Interest rates rise; new 10-year G-secs now yield 7%
+- Your 6% bond is less attractive; if you sell, buyers pay less than 100 INR (price drops to ~95 INR)
+Risk mitigation: Hold bonds to maturity, or invest in shorter-duration bonds (shorter maturity = less rate risk)
+
+Q4.4: What is a Fixed Deposit, and how does it differ from mutual funds?
+A: Fixed Deposits: Money locked for fixed tenure at fixed interest rate. Your capital is guaranteed by the bank. Risk: Very low (bank failure risk is minimal). Returns: Fixed and known upfront. Example: 5-year FD at 7.2% = guaranteed 7.2% annual return.
+
+Mutual Funds: Money invested in stocks/bonds; returns variable based on market performance. Risk: Medium to high (equity) or low (debt funds). Returns: Unknown; depend on market conditions. Example: Equity fund may return 10-20% in good years, -5% in bad years.
+
+Q4.5: Can I redeem a Fixed Deposit before maturity?
+A: Yes, but with penalties:
+- Within 6 months: Typically not allowed (or at lower interest rates)
+- 6-12 months: Interest charged at lower rates (e.g., savings account rate)
+- >12 months: You can withdraw at full FD rate minus 0.5%
+Example: 5-year FD at 7.2% redeemed after 3 years = you get savings account rate (~5%) on that portion
+
+SECTION 5: PORTFOLIO PERFORMANCE & MONITORING
+
+Q5.1: What is a benchmark index, and why is it important?
+A: A benchmark index is a market index against which your portfolio performance is compared. Common benchmarks:
+- For equity portfolios: Sensex 50, Nifty 50
+- For debt portfolios: CRISIL Composite Bond Index
+- For balanced portfolios: Combination (e.g., 60% Nifty 50, 40% Bond Index)
+Importance: Helps assess if your portfolio is outperforming or underperforming the market. If your portfolio return <benchmark for 2+ years, underperformance exists.
+
+Q5.2: How often should I review my portfolio performance?
+A: Recommended review frequency:
+- Monthly: Check statements for holdings and valuations
+- Quarterly: Discuss with your advisor; assess if asset allocation is on track
+- Annual: Comprehensive review including tax planning, life changes, goal progress
+- Immediate: After major market events (>15% market movement) or personal circumstances change
+
+Q5.3: What is a portfolio return, and how is it calculated?
+A: Portfolio return is the percentage gain/loss on your total portfolio over a period. Calculated as:
+Return % = (Ending Value - Starting Value) / Starting Value × 100
+Example: Portfolio value on Jan 1 = 10,00,000 INR; Dec 31 = 11,25,000 INR
+Return = (11,25,000 - 10,00,000) / 10,00,000 × 100 = 12.5% annual return
+
+Q5.4: What are tax-loss harvesting strategies?
+A: Tax-loss harvesting is selling investments at a loss to offset capital gains from other investments, reducing your tax liability. Available to Elite Portfolio customers (10,000 INR quarterly service). Example:
+- Equity Fund A: Gain of 50,000 INR
+- Equity Fund B: Loss of 30,000 INR
+- Net gain: 20,000 INR (instead of 50,000 INR tax-loss harvest realized)
+- Tax benefit: Significant reduction in capital gains tax
+
+Q5.5: What documents do I receive for wealth portfolio accounts?
+A: Monthly statements include:
+- Holdings summary: List of investments with valuations
+- Performance: Portfolio return vs. benchmark
+- Transactions: All purchases, sales, rebalancing done during month
+- Charges: Asset management fee, transaction charges
+Annual statement: Tax-reporting document with capital gains summary
+On-demand: Annual comprehensive wealth plan, fund fact sheets, performance analysis
+
+SECTION 6: SUITABILITY & RESTRICTIONS
+
+Q6.1: Can a Conservative investor hold small-cap stocks?
+A: No. Small-cap stocks are restricted to Aggressive profiles due to high volatility. Conservative investors are limited to:
+- Large-cap equities only (capped at 30-40% allocation)
+- Blue-chip dividend-yielders
+- No single-stock concentration >5% of portfolio
+Rationale: Preserve capital and minimize downside risk for conservative investors.
+
+Q6.2: What are "restricted products," and why do they exist?
+A: Restricted products are those unavailable to certain risk profiles. Examples:
+- Derivatives/hedging options: Only Growth-Oriented & Aggressive profiles (high complexity)
+- Penny stocks: Restricted for Conservative profiles (extreme volatility)
+- Structured products: Only for Moderate+ profiles (complexity and loss potential)
+Restrictions are compliance requirements to ensure suitability and prevent unsuitable investor exposure to high-risk products.
+
+Q6.3: What happens if my portfolio becomes unsuitable?
+A: If market movements cause your actual allocation to deviate from suitable range:
+- Alert issued to you and your advisor
+- Recommendation provided to rebalance
+- Mandatory rebalancing required if deviation >20% from target
+Example: Conservative investor's equity allocation rises to 60% (from target 30%) due to stock market rally. Your advisor recommends reducing equities to target.
+
+Q6.4: Can I access alternative investments like private equity with my portfolio?
+A: Alternative investments (private equity, hedge funds) are typically available to Elite Portfolio customers only (minimum 1 crore AUM). These require:
+- Accredited investor status
+- 5-7 year lock-in commitments
+- Complex documentation and risk acknowledgment
+- Minimum entry typically 25-50 lakhs per fund
+Your advisor can discuss eligibility if your AUM grows into the Elite tier.
+
+SECTION 7: WITHDRAWAL & LIQUIDITY
+
+Q7.1: Can I partially withdraw from my wealth portfolio without closing the account?
+A: Yes, partial withdrawals are allowed:
+- Up to 25% of portfolio: Processed within 5 business days; no penalty
+- Holdings >25%: Subject to liquidity constraints; holdings liquidated per market conditions
+Minimum account balance after withdrawal: Varies by tier (Classic minimum post-withdrawal: 2 lakh INR; Premier minimum: 10 lakh INR)
+
+Q7.2: What is a Systematic Withdrawal Plan (SWP), and how does it work?
+A: SWP allows you to withdraw fixed amounts regularly (monthly, quarterly) from your portfolio. Mechanics:
+- Liquid funds or dividend-paying stocks are liquidated to fund withdrawal
+- No market timing; automatic discipline
+- Tax efficient: Withdrawal treated as redemption (long-term capital gains if >1 year holding)
+- Limit: Typical maximum 5% per annum (5 lakh per month from 1 crore portfolio)
+
+Q7.3: How long does it take to liquidate my entire portfolio?
+A: Full liquidation timeline:
+- Liquid funds & money market: 1-2 business days
+- Mutual funds: 3-5 business days
+- Direct stocks: 2-3 business days (T+1 settlement)
+- Fixed deposits/bonds: Per instrument terms (may have early redemption penalties)
+- Total portfolio liquidation: 10 business days (typical)
+Final settlement of proceeds: 15 business days after liquidation
+
+Q7.4: What happens to my account if I don't withdraw for a long time?
+A: Inactive accounts (no transactions for 12 months) may trigger:
+- Alert to you and your advisor for check-in
+- Email notification about account status
+- No forced action; account remains active with your investments growing
+- However, annual KYC update required to maintain account status
+To maintain active status: At least one review/transaction per year recommended.
+
+SECTION 8: COMPLIANCE & ACCOUNT CLOSURE
+
+Q8.1: When can I close my wealth portfolio account?
+A: Account closure is permitted anytime with:
+- 30-day notice provided to Meridian
+- All holdings liquidated per market conditions
+- Final fees assessed
+- Proceeds remitted within 15 days of closure
+
+Q8.2: What is the process to close my account?
+A: Steps:
+1. Submit written request to your relationship manager or branch
+2. Specify closure reason (optional; helps Meridian improve services)
+3. Receive liquidation proposal within 5 business days
+4. Approve liquidation or provide alternative instruction
+5. Holdings liquidated; fees settled
+6. Final statement generated
+7. Proceeds transferred to designated account within 15 days
+
+Q8.3: Can my account be closed by Meridian?
+A: Yes, Meridian can force closure if:
+- AUM falls below tier minimum for 6+ consecutive months
+- Regulatory compliance failures (KYC not updated >12 months)
+- Fraud or illegal activity detected
+- Court-ordered attachment of assets
+Process: 60-90 day notice provided; pro-rata fee refund issued

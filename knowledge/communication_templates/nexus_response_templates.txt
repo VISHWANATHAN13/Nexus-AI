@@ -1,0 +1,353 @@
+MERIDIAN FINANCIAL GROUP - NEXUS CONCIERGE COMMUNICATION TEMPLATES
+For use by automated response system; all templates subject to guardrails review
+
+TEMPLATE_ID: CT-BANKING-001
+Scenario: Auto-Debit Setup Confirmation
+---
+Dear {customer_name},
+
+Thank you for authorizing auto-debit for your {payment_type} premium.
+
+Auto-Debit Details:
+Payee: {payee_name}
+Amount: ₹{amount}
+Frequency: {frequency}
+Effective Date: {start_date}
+Account: {masked_account_number}
+
+The auto-debit will be attempted on {due_date} of each month. If the due date falls on a weekend or holiday, the debit will be processed on the next business day.
+
+If insufficient balance is available, we'll retry once on the next business day. After two consecutive failures, the auto-debit mandate will be canceled.
+
+You can modify or cancel this mandate anytime through your online portal or by contacting our support team.
+
+Best regards,
+Meridian Concierge Team
+---
+
+TEMPLATE_ID: CT-BANKING-002
+Scenario: Fixed Deposit Maturity Notice
+---
+Dear {customer_name},
+
+Your Fixed Deposit is maturing soon. Please review the details below and take action:
+
+FD Details:
+Principal Amount: ₹{principal}
+Maturity Date: {maturity_date}
+Interest Earned: ₹{interest_amount}
+Total Maturity Value: ₹{total_value}
+Account: {masked_account_number}
+
+Action Required by {cutoff_date}:
+• Reinvest in a new FD (available tenures: 1, 3, 5 years at current rates)
+• Transfer to savings account
+• Withdraw the amount
+• Set up auto-renewal (if selected, interest rate will be current rate on renewal date)
+
+If no action is taken by the maturity date, funds will be transferred to your linked savings account and will earn savings account interest rate.
+
+Would you like to explore renewal options? Reply with "RENEW" to set up a new FD, or contact us at 1800-121-2020.
+
+Best regards,
+Meridian Concierge Team
+---
+
+TEMPLATE_ID: CT-BANKING-003
+Scenario: Loan EMI Payment Reminder
+---
+Dear {customer_name},
+
+Reminder: Your loan EMI is due soon.
+
+Loan EMI Details:
+Loan Type: {loan_type}
+EMI Amount: ₹{emi_amount}
+Due Date: {due_date}
+Outstanding Balance: ₹{outstanding_balance}
+Remaining Tenure: {remaining_months} months
+
+Auto-debit Status: {auto_debit_status}
+
+If auto-debit is enabled, the amount will be debited from your linked account on {due_date}. Please ensure sufficient balance.
+
+To make additional prepayment towards loan closure, reply with "PREPAY" or visit your online portal.
+
+Late payment may attract penalty charges and impact your credit score.
+
+Best regards,
+Meridian Concierge Team
+---
+
+TEMPLATE_ID: CT-INSURANCE-001
+Scenario: Insurance Premium Payment Due
+---
+Dear {customer_name},
+
+Your insurance premium is due for renewal.
+
+Policy Details:
+Policy Type: {policy_type}
+Policy Number: {masked_policy_number}
+Premium Amount: ₹{premium_amount}
+Due Date: {due_date}
+Coverage Period: {coverage_period}
+
+Payment Options:
+1. Auto-debit from your linked savings account: {auto_debit_status}
+2. Online payment via our website
+3. Cheque payment by post
+4. Payment at any Meridian branch
+
+Grace Period: You have until {grace_period_date} to pay without coverage lapse. Payment after this date will result in policy cancellation.
+
+To authorize auto-debit for future premiums, reply "SETUP AUTOPAY" or visit your online portal.
+
+Do not miss this date! Ensure continuous coverage for your asset protection.
+
+Best regards,
+Meridian Concierge Team
+---
+
+TEMPLATE_ID: CT-INSURANCE-002
+Scenario: Insurance Claim Status Update
+---
+Dear {customer_name},
+
+Claim Status Update: Your insurance claim is being processed.
+
+Claim Details:
+Claim Number: {claim_id}
+Policy Number: {masked_policy_number}
+Claim Amount: ₹{claim_amount}
+Loss Date: {loss_date}
+Current Status: {claim_status}
+
+Next Steps:
+{status_details}
+
+Expected Settlement: {expected_settlement_date}
+
+If you need to provide additional documents or clarifications, please submit them to claims@meridianinsurance.com with your claim number, or call our claims team at 1800-121-2020.
+
+We're committed to resolving your claim quickly and fairly.
+
+Best regards,
+Meridian Claims Team
+---
+
+TEMPLATE_ID: CT-INSURANCE-003
+Scenario: Insurance Policy Lapsed - Urgent Notification
+---
+Dear {customer_name},
+
+URGENT: Your {policy_type} policy has lapsed.
+
+Policy Details:
+Policy Number: {masked_policy_number}
+Lapse Date: {lapse_date}
+Last Premium Due Date: {last_due_date}
+
+Your coverage is no longer active. Any loss occurring after the lapse date will NOT be covered.
+
+To Restore Coverage:
+1. Pay all outstanding premiums immediately
+2. Complete fresh KYC (health declaration for health policies)
+3. Policy will be restored with retroactive coverage from lapse date
+
+If not restored within 30 days, reinstatement requires fresh underwriting and health examination.
+
+Action Required By: {reinstatement_deadline}
+
+Reply "RESTORE POLICY" to proceed, or call us at 1800-121-2020 for assistance.
+
+Best regards,
+Meridian Concierge Team
+---
+
+TEMPLATE_ID: CT-WEALTH-001
+Scenario: Portfolio Rebalancing Notification
+---
+Dear {customer_name},
+
+Your wealth portfolio has been rebalanced per your target allocation.
+
+Rebalancing Summary:
+Date: {rebalancing_date}
+Trigger: {rebalancing_trigger} deviation detected
+New Portfolio Composition:
+• Equities: {equity_allocation}%
+• Debt: {debt_allocation}%
+• Alternatives: {alternative_allocation}%
+• Cash: {cash_allocation}%
+
+Actions Taken:
+{rebalancing_actions}
+
+Performance Update:
+Portfolio Return (YTD): {ytd_return}%
+Benchmark Comparison: {benchmark_comparison}
+
+Your dedicated advisor is available for a quarterly review discussion. Request a call by replying "SCHEDULE REVIEW".
+
+Best regards,
+Meridian Wealth Team
+---
+
+TEMPLATE_ID: CT-WEALTH-002
+Scenario: Investment Suitability Warning
+---
+Dear {customer_name},
+
+Suitability Review Alert: We want to ensure your investments match your risk profile.
+
+Current Profile:
+Your Documented Risk Profile: {risk_profile}
+Current Portfolio Equity Allocation: {current_equity_allocation}%
+Recommended Range: {recommended_range}%
+
+Finding:
+Your portfolio exceeds the recommended equity allocation for your risk profile by {deviation}%.
+
+Recommendation:
+To align your portfolio with your risk profile, consider:
+1. Reducing equity allocation by shifting to debt/fixed income
+2. Adding stable value alternatives (Gold ETF, Sovereign Gold Bonds)
+3. Scheduled withdrawal plan to lock in gains
+
+Next Steps:
+Your portfolio advisor will contact you within 2 business days to discuss options. You can also reply "DISCUSS SUITABILITY" to accelerate this conversation.
+
+This is a compliance-driven review to protect your financial wellbeing.
+
+Best regards,
+Meridian Wealth Management Compliance Team
+---
+
+TEMPLATE_ID: CT-ESCALATION-001
+Scenario: Mandatory Escalation - Financial Hardship Detected
+---
+Dear {customer_name},
+
+We've noted your financial hardship disclosure in your recent request.
+
+Details Noted:
+{hardship_details}
+Request Category: Financial Hardship
+
+Policy: Requests flagged for financial hardship are escalated to our Hardship Management team for specialized assistance, regardless of request complexity or initial response confidence.
+
+Next Steps:
+1. Our Hardship Management team will contact you within 24 business hours
+2. We'll discuss customized solutions including:
+   - Payment holiday options
+   - EMI restructuring
+   - Temporary fee waivers
+   - Alternative product recommendations
+
+Your case has been marked PRIORITY and assigned to a dedicated specialist.
+
+Reference Number: {escalation_reference}
+Expected Contact Date: {contact_date}
+
+If you need immediate assistance, call our Hardship Desk at 1800-121-4949 (24/7).
+
+We're here to help you navigate this challenging period.
+
+Best regards,
+Meridian Hardship Management Team
+---
+
+TEMPLATE_ID: CT-ESCALATION-002
+Scenario: Compliance Override Request - Escalation Required
+---
+Dear {customer_name},
+
+Your request requires review by our Compliance and Senior Management team.
+
+Request Summary:
+{request_summary}
+Escalation Reason: Compliance Review Required
+
+Process:
+1. Compliance officer will review your request against regulatory guidelines
+2. Senior management approval required (typical timeline: 5-7 business days)
+3. You'll receive detailed response explaining approval/denial with full rationale
+
+Reference Number: {escalation_reference}
+Assigned To: {compliance_officer_name}
+Expected Response: {expected_response_date}
+
+You can follow up using your reference number by contacting: compliance@meridianfinancial.com
+
+We appreciate your patience as we ensure all actions meet our regulatory obligations.
+
+Best regards,
+Meridian Compliance Team
+---
+
+TEMPLATE_ID: CT-ERROR-001
+Scenario: Retrieval Conflict - Authoritative Data Update
+---
+Dear {customer_name},
+
+We've identified a discrepancy in your account information that requires your attention.
+
+Discrepancy Details:
+System Source: {source_1}
+Says: {conflicting_info_1}
+
+System Source: {source_2}
+Says: {conflicting_info_2}
+
+Authority Resolution:
+Our authoritative source ({authoritative_source}) shows: {authoritative_information}
+
+Why This Matters:
+This conflict could affect {impact_area}. Our system uses authoritative live data to ensure accuracy.
+
+Action Required:
+Please verify this information and confirm which details are accurate. Reply with:
+• "CONFIRM [authoritative info]" if correct
+• "DISPUTE [reason]" if you believe there's an error
+
+If this involves {account_number}/policy restriction, please contact us immediately at 1800-121-2020.
+
+Reference Number: {dispute_reference}
+
+Best regards,
+Meridian Customer Verification Team
+---
+
+TEMPLATE_ID: CT-KYC-001
+Scenario: KYC Update Required
+---
+Dear {customer_name},
+
+Your Know Your Customer (KYC) verification has expired and requires immediate update.
+
+Last KYC Update: {last_kyc_date}
+Due Date: {kyc_due_date}
+Status: OVERDUE - Update Required Immediately
+
+Required Documents:
+1. Valid Identity Proof (Aadhaar/PAN/Passport)
+2. Current Address Proof (Utility Bill/Rental Agreement dated within 3 months)
+3. Income Declaration (Self-certification or income proof)
+
+Update Methods:
+1. Online Update: Visit portal and complete e-KYC (if eligible)
+2. Branch Visit: Bring documents to nearest Meridian branch
+3. Video KYC: Schedule a video verification call
+
+Consequences of Non-Compliance:
+• Account restrictions: No new transactions permitted
+• Debit card/checkbook services may be suspended
+• Loan and credit limits may be frozen
+
+Action Required By: {update_deadline}
+
+Reply "SCHEDULE VIDEO KYC" to book a time slot, or visit your nearest branch immediately.
+
+Best regards,
+Meridian Compliance Team

@@ -1,0 +1,191 @@
+# All tunable behaviour lives here (no hardcoding in code). Env vars in .env.example can override the LLM names.
+
+llm:
+  provider_prefix: openai/          # CrewAI LLM string = prefix + model
+  # CONFIRM these three IDs exist on your OpenAI account (client.models.list()) and edit if not.
+  small: gpt-5.4-nano               # Classifier: fixed JSON extraction
+  mid: gpt-5.4-mini                 # Retriever, Drafter, Escalation: tool use + writing
+  top: gpt-5.4                      # Validator: strictest judgement
+  embedding: text-embedding-3-small
+  temperature: null                 # null = provider default (some reasoning models reject a temperature)
+  guardrail_retries: 3
+
+network:
+  use_system_certs: true      # config.setup_environment() calls truststore.inject_into_ssl() so the OS certificate store is trusted (fixes CERTIFICATE_VERIFY_FAILED behind a company proxy)
+
+database:
+  # which tables each MCP server may read, and which it may INSERT into (insert-only = append-only)
+  server_tables:
+    banking_server:       {read: [accounts, transactions], insert: []}
+    insurance_server:     {read: [policies, policy_clauses, claims], insert: []}
+    wealth_server:        {read: [portfolios, investment_products], insert: []}
+    # escalation_flags is insert-only too: the pipeline raises one open flag per escalated request (the human work queue)
+    concierge_ops_server: {read: [customers, interaction_log, escalation_flags, audit_log], insert: [interaction_log, audit_log, escalation_flags]}
+
+ids:
+  customer:  '^CUS-\d{5}$'
+  account:   '^ACC-\d{5}$'
+  policy:    '^POL-[A-Z0-9]{2}-\d{5}$'
+  portfolio: '^PORT-\d{5}$'
+  product:   '^PROD-[A-Z0-9]{2}-[A-Z0-9]{2}$'
+  claim:     '^CLM-\d{5}$'
+scenario_tag_pattern: '^[a-z][a-z_]{2,39}$'
+doc_id_pattern: '^[\w-]{2,80}$'
+lowercase_token_pattern: '^[a-z][a-z_]{2,39}$'   # audit action_type / performed_by
+masked_kinds: [account, policy, portfolio]   # identifiers that must never reach a customer unmasked
+
+scopes:
+  order: [summary, service, full]    # least -> most privileged
+  account:
+    summary: [account_number, account_type, account_status]
+    service: [account_number, account_type, account_status, customer_id, balance, currency, auto_debit_enabled, auto_debit_restriction_reason]
+    full:    [account_number, account_type, account_status, customer_id, balance, currency, auto_debit_enabled, auto_debit_restriction_reason, opened_at]
+  portfolio:
+    summary: [portfolio_number, portfolio_name, portfolio_status]
+    service: [portfolio_number, portfolio_name, portfolio_status, customer_id, risk_profile, total_value, currency]
+    full:    [portfolio_number, portfolio_name, portfolio_status, customer_id, risk_profile, total_value, currency, created_at]
+  product:
+    summary: [product_id, product_name, product_type, risk_level]
+    service: [product_id, product_name, product_type, risk_level, minimum_investment, liquidity, product_status]
+    full:    [product_id, product_name, product_type, risk_level, minimum_investment, liquidity, product_status, expected_return_description]
+  transactions_min_scope: service
+
+text:
+  customer_max_len: 1000
+  message_max_len: 1500
+  tool_output_max_len: 4000
+  audit_outcome_max_len: 200
+  audit_details_max_len: 500
+  log_free_text_over: 100            # strings longer than this are logged as length+hash only
+  log_arg_clip: 300
+  log_preview_chars: 200
+
+escalation:
+  categories: [none, financial_hardship, safeguarding_concern, compliance_override_request]
+  hard_categories: [financial_hardship, safeguarding_concern, compliance_override_request]
+  confidence_threshold: 0.75
+  unanswered_confidence_cap: 0.5     # if the validator says the draft does NOT answer the question, confidence is capped here
+  routes:
+    financial_hardship: financial_support_team
+    safeguarding_concern: safeguarding_team
+    compliance_override_request: compliance_team
+    low_confidence: customer_service_specialist
+    kyc_not_verified: kyc_team
+  no_notification_categories: [safeguarding_concern]   # never push a message to the customer's channels
+  llm_screen:                        # independent model-based second opinion on escalation_category (can only raise it)
+    enabled: true                    # false = skip the extra small-model call; the phrase scan + Classifier still apply
+
+intake:
+  product_lines: [banking, insurance, wealth, cross_product]
+  request_types: [balance_inquiry, transaction_inquiry, coverage_question, claim_status, auto_debit_setup, portfolio_query, product_suitability, complaint, other]
+  urgencies: [routine, high, critical]
+
+routing:
+  # which MCP servers the Retriever agent may use, by classified product line
+  product_line_servers:
+    banking:       [banking_server]
+    insurance:     [insurance_server]
+    wealth:        [wealth_server]
+    cross_product: [banking_server, insurance_server, wealth_server]
+  agent_tools:
+    escalation: [run_escalation_check]
+  retriever_scope: service
+  bind_agent_tools: true             # servers started FOR AN AGENT only return records owned by the request's customer, at or below retriever_scope
+  reference_server:                  # identifier kind -> the MCP server that owns that kind of record
+    account: banking_server
+    policy: insurance_server
+    claim: insurance_server
+    portfolio: wealth_server
+    product: wealth_server
+  ownership_checks:                   # reference kind -> server, tool, argument name, scope (all read-only, run before retrieval)
+    account:   {server: banking_server,   tool: get_account_summary,  arg: account_id,   scope: service}
+    policy:    {server: insurance_server, tool: get_policy_details,    arg: policy_id,    scope: null}
+    portfolio: {server: wealth_server,    tool: get_portfolio_summary, arg: portfolio_id, scope: service}
+    claim:     {server: insurance_server, tool: get_claim_status,      arg: claim_id,     scope: null}
+
+output_filter:                        # guardrails.check_output: absolute wording the grounded facts do not themselves contain
+  overclaim_patterns:
+    - '\bguarantee[sd]?\b'
+    - '\b100\s?%\s*(?:safe|secure|certain|sure|covered|guaranteed|risk[- ]free)'
+    - '\bnever (?:fail|fails|failed|goes? wrong|declin\w+|rejected?)\b'
+    - '\bno risk\b|\brisk[- ]free\b|\bwithout any risk\b|\bcannot go wrong\b'
+    - '\balways (?:covered|approved|allowed|accepted|successful)\b'
+    - '\bin every case\b|\bunder all circumstances\b|\bno exceptions?\b'
+    - '\bwill definitely\b|\bis definitely\b|\bfully covered\b'
+
+conflict_rules:                       # deterministic retrieval-conflict detector (pipeline.detect_conflicts): LIVE record vs DOCUMENT wording
+
+  negation: |-                        # a sentence with one of these words is NOT a blanket permission, so it is never a conflict
+    \b(?:not|never|cannot|can.?t|unable|no longer|unless|except|prohibited|ineligible|only if)\b
+
+  rules:
+
+    - topic: auto-debit
+
+      live_kind: account              # which live record (fetched by the ownership check) the rule reads
+
+      live_when:                      # the rule fires if ANY of these holds for that record (a merely switched-off account is NOT a restriction)
+
+        - {field: account_status, one_of: [restricted, frozen, closed, suspended, dormant]}
+
+        - {field: auto_debit_restriction_reason, not_empty: true}
+
+      live_data: 'account is {account_status}; auto-debit is not allowed on it'
+
+      document_topic: |-
+        \bauto[- ]?debit\b|\bautomatic (?:premium |payment )?debit\b|\bdirect debit\b
+
+      document_permission: |-
+        \b(?:permitted|allowed|available|accepted|supported|eligible|yes|may (?:use|authori[sz]e|pay|set up)|can (?:be used|use|pay|set up))\b
+
+      document_claim: permitted
+ 
+retrieval:
+  verify_figures: true               # a live fact quoting a figure (>= min_figure_digits digits) that no tool of that server returned is dropped
+  min_figure_digits: 4
+
+suitability:                          # customer risk profile -> product risk levels it may hold
+  conservative: [low]
+  moderate: [low, medium]
+  aggressive: [low, medium, high]
+
+notification:
+  channels: [email, sms, push]
+  delivery_channel: push
+  interaction_defaults: {product_line: notification, request_type: outbound_notification}
+
+mcp:
+  servers: [banking_server, insurance_server, wealth_server, concierge_ops_server]
+  call_timeout_seconds: 60
+  # OFF by default. true = the orchestrator keeps one long-lived stdio session per server instead of starting a new server
+  # process for every call (the main latency cost: ~6 s per call). Falls back to one-process-per-call if a session cannot be
+  # opened. Enable only after `python verify_live.py` passes on your machine. Env override: NEXUS_PERSISTENT_MCP=1
+  persistent_sessions: false
+
+knowledge:
+  root: knowledge
+  folders: [communication_templates, policy_docs, product_docs, faqs]
+  demo_dir: demo_assets/poisoned_docs   # only indexed when NEXUS_DEMO=1
+  index_dir: data/chroma
+  chunk_size: 800
+  chunk_overlap: 100
+  top_k: 4
+  excerpt_chars: 600
+  text_extensions: [.md, .txt]
+  csv_extensions: [.csv]
+
+messages:                           # customer-facing text for pipeline failures (never an LLM guess)
+  rejected: We could not process your request. Please check your details and try again.
+  error: We are unable to complete your request right now. No information has been provided; please try again shortly.
+  kyc_pending: We need to finish verifying your identity before we can share account information. A team member will be in touch.
+  by_code:                          # more helpful text for specific typed errors (the customer re-sends their message)
+    MISSING_CUSTOMER_ID: Please include your customer ID in your message (it looks like CUS-12345) so we can help you.
+    INVALID_CUSTOMER_ID: The customer ID you gave is not in the right format. It should look like CUS-12345 - please check it and send your message again.
+    AMBIGUOUS_CUSTOMER_ID: Your message contains more than one customer ID. Please send it again with only your own customer ID.
+    INPUT_TOO_LONG: Your message is too long. Please shorten it and send it again.
+  delivery_channel_note: A specialist will contact you through your registered channel.
+
+  hard_handoff: Thank you for telling us. A specialist from our team will contact you personally through your registered channel.
+
+  hard_unidentified: If you are worried about your safety or your finances right now, please contact our customer support team directly and a specialist will help you straight away.
+ 

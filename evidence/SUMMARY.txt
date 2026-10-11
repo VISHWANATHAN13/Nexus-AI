@@ -1,0 +1,4 @@
+step                                          result   seconds
+1_tests                                       PASS       120.9
+2_verify_live_servers_and_orchestrator        PASS        61.4
+3_demo_offline                                PASS        12.5

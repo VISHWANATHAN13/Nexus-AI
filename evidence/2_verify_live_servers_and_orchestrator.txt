@@ -1,0 +1,90 @@
+step: 2_verify_live_servers_and_orchestrator
+command: C:\data\nexus_ai\nexus_final\.nexusai\Scripts\python.exe verify_live.py
+when: 2026-10-10T05:17:46+00:00
+python: 3.13.7 on Windows
+exit code: 0
+seconds: 61.4
+==============================================================================
+1. Each MCP server starts as its own process and answers a live MCP client (stdio):
+  [PASS] banking_server: tools ['get_account_summary', 'get_transaction_history', 'get_linked_accounts'], resources ['account://{account_id}/summary'], prompts []
+  [PASS] insurance_server: tools ['get_policy_details', 'check_coverage_clause', 'get_claim_status'], resources ['policy://{policy_id}/summary'], prompts []
+  [PASS] wealth_server: tools ['get_portfolio_summary', 'get_investment_product_details', 'check_product_suitability'], resources [], prompts []
+  [PASS] concierge_ops_server: tools ['get_customer_kyc_status', 'run_escalation_check', 'send_customer_notification', 'write_audit_log'], resources ['customer://{customer_id}/profile', 'knowledgebase://{document_id}/excerpt'], prompts ['request_classification_prompt', 'response_drafting_prompt']
+  [PASS] 13 tools / 4 resource templates / 2 prompts registered on the real FastMCP (got {'tools': 13, 'resource_templates': 4, 'prompts': 2})
+2. Live tool / resource / prompt calls (ids taken from the showcase scenario in demo_scenarios.yaml):
+  [PASS] banking_server.get_account_summary returns a masked number
+  [PASS] insurance_server.check_coverage_clause answers from policy_clauses
+  [PASS] concierge_ops_server.run_escalation_check escalates a hard category at 0.99
+  [PASS] resource customer://.../profile is readable and masks contact details
+  [PASS] prompt response_drafting_prompt renders
+  [PASS] typed error crosses the MCP boundary
+3. Orchestrator as an independent local process:
+  [PASS] orchestrator process starts and answers
+
+12/12 live checks passed
+
+--- stderr ---
+C:\data\nexus_ai\nexus_final\.nexusai\Lib\site-packages\pydantic_settings\sources\utils.py:47: IncompleteFieldDefinitionWarning: Field 'lifespan' has an incomplete definition: its annotation contains an unresolved forward reference, so settings sources may fail to correctly resolve its value. Call `model_rebuild()` on the model where the field is defined, once all the referenced types are defined.
+  warnings.warn(
+[10/10/26 10:46:55] INFO     Processing request of type           server.py:733
+                             ListToolsRequest                                  
+                    INFO     Processing request of type           server.py:733
+                             ListResourceTemplatesRequest                      
+                    INFO     Processing request of type           server.py:733
+                             ListPromptsRequest                                
+C:\data\nexus_ai\nexus_final\.nexusai\Lib\site-packages\pydantic_settings\sources\utils.py:47: IncompleteFieldDefinitionWarning: Field 'lifespan' has an incomplete definition: its annotation contains an unresolved forward reference, so settings sources may fail to correctly resolve its value. Call `model_rebuild()` on the model where the field is defined, once all the referenced types are defined.
+  warnings.warn(
+[10/10/26 10:47:00] INFO     Processing request of type           server.py:733
+                             ListToolsRequest                                  
+                    INFO     Processing request of type           server.py:733
+                             ListResourceTemplatesRequest                      
+                    INFO     Processing request of type           server.py:733
+                             ListPromptsRequest                                
+C:\data\nexus_ai\nexus_final\.nexusai\Lib\site-packages\pydantic_settings\sources\utils.py:47: IncompleteFieldDefinitionWarning: Field 'lifespan' has an incomplete definition: its annotation contains an unresolved forward reference, so settings sources may fail to correctly resolve its value. Call `model_rebuild()` on the model where the field is defined, once all the referenced types are defined.
+  warnings.warn(
+[10/10/26 10:47:06] INFO     Processing request of type           server.py:733
+                             ListToolsRequest                                  
+                    INFO     Processing request of type           server.py:733
+                             ListResourceTemplatesRequest                      
+                    INFO     Processing request of type           server.py:733
+                             ListPromptsRequest                                
+C:\data\nexus_ai\nexus_final\.nexusai\Lib\site-packages\pydantic_settings\sources\utils.py:47: IncompleteFieldDefinitionWarning: Field 'lifespan' has an incomplete definition: its annotation contains an unresolved forward reference, so settings sources may fail to correctly resolve its value. Call `model_rebuild()` on the model where the field is defined, once all the referenced types are defined.
+  warnings.warn(
+[10/10/26 10:47:11] INFO     Processing request of type           server.py:733
+                             ListToolsRequest                                  
+                    INFO     Processing request of type           server.py:733
+                             ListResourceTemplatesRequest                      
+                    INFO     Processing request of type           server.py:733
+                             ListPromptsRequest                                
+C:\data\nexus_ai\nexus_final\.nexusai\Lib\site-packages\pydantic_settings\sources\utils.py:47: IncompleteFieldDefinitionWarning: Field 'lifespan' has an incomplete definition: its annotation contains an unresolved forward reference, so settings sources may fail to correctly resolve its value. Call `model_rebuild()` on the model where the field is defined, once all the referenced types are defined.
+  warnings.warn(
+[10/10/26 10:47:16] INFO     Processing request of type           server.py:733
+                             CallToolRequest                                   
+[10/10/26 10:47:17] INFO     Processing request of type           server.py:733
+                             ListToolsRequest                                  
+C:\data\nexus_ai\nexus_final\.nexusai\Lib\site-packages\pydantic_settings\sources\utils.py:47: IncompleteFieldDefinitionWarning: Field 'lifespan' has an incomplete definition: its annotation contains an unresolved forward reference, so settings sources may fail to correctly resolve its value. Call `model_rebuild()` on the model where the field is defined, once all the referenced types are defined.
+  warnings.warn(
+[10/10/26 10:47:22] INFO     Processing request of type           server.py:733
+                             CallToolRequest                                   
+                    INFO     Processing request of type           server.py:733
+                             ListToolsRequest                                  
+C:\data\nexus_ai\nexus_final\.nexusai\Lib\site-packages\pydantic_settings\sources\utils.py:47: IncompleteFieldDefinitionWarning: Field 'lifespan' has an incomplete definition: its annotation contains an unresolved forward reference, so settings sources may fail to correctly resolve its value. Call `model_rebuild()` on the model where the field is defined, once all the referenced types are defined.
+  warnings.warn(
+[10/10/26 10:47:27] INFO     Processing request of type           server.py:733
+                             CallToolRequest                                   
+                    INFO     Processing request of type           server.py:733
+                             ListToolsRequest                                  
+C:\data\nexus_ai\nexus_final\.nexusai\Lib\site-packages\pydantic_settings\sources\utils.py:47: IncompleteFieldDefinitionWarning: Field 'lifespan' has an incomplete definition: its annotation contains an unresolved forward reference, so settings sources may fail to correctly resolve its value. Call `model_rebuild()` on the model where the field is defined, once all the referenced types are defined.
+  warnings.warn(
+[10/10/26 10:47:33] INFO     Processing request of type           server.py:733
+                             ReadResourceRequest                               
+C:\data\nexus_ai\nexus_final\.nexusai\Lib\site-packages\pydantic_settings\sources\utils.py:47: IncompleteFieldDefinitionWarning: Field 'lifespan' has an incomplete definition: its annotation contains an unresolved forward reference, so settings sources may fail to correctly resolve its value. Call `model_rebuild()` on the model where the field is defined, once all the referenced types are defined.
+  warnings.warn(
+[10/10/26 10:47:38] INFO     Processing request of type           server.py:733
+                             GetPromptRequest                                  
+C:\data\nexus_ai\nexus_final\.nexusai\Lib\site-packages\pydantic_settings\sources\utils.py:47: IncompleteFieldDefinitionWarning: Field 'lifespan' has an incomplete definition: its annotation contains an unresolved forward reference, so settings sources may fail to correctly resolve its value. Call `model_rebuild()` on the model where the field is defined, once all the referenced types are defined.
+  warnings.warn(
+[10/10/26 10:47:44] INFO     Processing request of type           server.py:733
+                             CallToolRequest                                   
+                    INFO     Processing request of type           server.py:733
+                             ListToolsRequest                                  

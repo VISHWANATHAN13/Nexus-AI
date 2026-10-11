@@ -1,0 +1,19 @@
+product_id,product_name,asset_class,risk_level,expected_annual_return_pct,minimum_investment_inr,tenure_years,fund_manager,expense_ratio_pct,suitability_profile,key_strategy,benchmark_index,year_to_date_return_pct
+PROD-WE-01,Meridian Index Fund Sensex50,Equity,Medium,14.5,5000,5,"Meridian Fund House",0.25,"Growth, Moderate+","Passive tracking of BSE SENSEX 50","BSE SENSEX 50",12.3
+PROD-WE-02,Meridian Bluechip Equity Fund,Equity,Medium,13.8,5000,5,"Rajesh Sharma","0.80","Growth, Moderate+","Large-cap equity selection, dividend-paying stocks","NSE Nifty 50",11.9
+PROD-WE-03,Meridian Multi-Cap Growth Fund,Equity,Medium-High,15.5,5000,5,"Priya Verma","0.95","Growth-Oriented, Aggressive","20% large-cap, 40% mid-cap, 40% small-cap blend","CRISIL Multi-Cap Growth",13.2
+PROD-WE-04,Meridian Emerging Midcap Fund,Equity,High,18.2,10000,7,"Vikram Patel","1.10","Aggressive profile only","Concentrated mid-cap and emerging leaders","BSE Midcap 100",16.8
+PROD-WE-05,Meridian Dividend Yield Fund,Equity,Medium,12.0,5000,3,"Anjali Singh","0.75","Income-Focused, Moderate","High dividend-yielding blue-chips, dividend reinvestment","Nifty Dividend Opportunities 50",10.5
+PROD-WE-06,Meridian Sectoral - Technology,Equity,High,22.5,15000,5,"Rohan Deshmukh","1.25","Aggressive profile only","Concentrated technology and IT services stocks","Nifty IT Index",19.7
+PROD-WE-07,Meridian Sectoral - Infrastructure,Equity,High,19.8,15000,7,"Suresh Kumar","1.15","Growth-Oriented, Aggressive","Infrastructure, utilities, renewable energy focused","Nifty Infrastructure Index",17.2
+PROD-WE-08,Meridian Government Securities Fund,Debt,Low,5.8,5000,3,"Deepak Gupta","0.30","Conservative, Income-Focused","100% allocation to rated government securities, 5-15 year tenure","CRISIL Composite Bond Index",5.2
+PROD-WE-09,Meridian Corporate Bond Fund,Debt,Low-Medium,7.2,10000,5,"Meera Nair","0.50","Conservative+, Moderate","AA+ rated corporate bonds, 5-10 year tenure, diversified issuers","CRISIL Corporate Bond Composite",6.8
+PROD-WE-10,Meridian Short Duration Debt Fund,Debt,Very Low,4.5,5000,1,"Harish Menon","0.25","Conservative, Capital Preservation","1-3 year duration government and corporate bonds, lower interest rate risk","CRISIL Liquid Fund Index",4.1
+PROD-WE-11,Meridian Ultra-Short Term Debt,Debt,Very Low,3.8,5000,Less than 1 year,"Pooja Sharma","0.15","Capital Preservation","Money market instruments, overnight funds, treasury bills","CRISIL 91-Day T-Bill Index",3.5
+PROD-WE-12,Meridian Balanced Fund 60-40,Hybrid,Medium,11.2,5000,5,"Vikas Iyer","0.70","Moderate","60% equity, 40% debt with dynamic rebalancing","CRISIL Balanced Fund Index",9.8
+PROD-WE-13,Meridian Conservative Balanced 30-70,Hybrid,Low-Medium,7.8,5000,3,"Sneha Desai","0.60","Conservative+, Income-Focused","30% equity, 70% debt, focus on capital preservation","CRISIL Conservative Balanced Fund Index",7.1
+PROD-WE-14,Meridian Arbitrage Fund,Hybrid,Very Low,4.2,10000,1,"Ashok Sharma","0.40","Capital Preservation, Moderate","Market-neutral arbitrage strategy, minimal equity exposure","CRISIL Arbitrage Fund Index",3.9
+PROD-WE-15,Meridian Real Estate Investment Trust,Real Estate,Medium-High,10.5,50000,5,"REIT Fund Manager","1.20","Growth-Oriented","Diversified real estate portfolio, dividend-yielding","NIFTY Realty Index",8.9
+PROD-WE-16,Meridian Infrastructure Bond,Fixed Income,Medium,8.5,100000,15,"Infrastructure Desk",0.80,"Growth-Oriented, Moderate","Infrastructure bonds AAA/AA rated, 15-year tenure, quarterly coupons","SEBI Infrastructure Bond Index",7.9
+PROD-WE-17,Meridian Gold ETF,Alternative,Low,6.2,5000,No fixed,ETF Manager,0.40,"Portfolio hedge, Conservative+","Backed by physical gold holdings, low expense","NYMEX Gold Futures",5.8
+PROD-WE-18,Meridian Sovereign Gold Bond,Alternative,Very Low,2.5,5000,7 years,"RBI Sovereign Issuance",0,"Portfolio hedge, Conservative","Government-backed gold bonds with interest coupon 2.5% + appreciation","Physical Gold Market Price",2.1

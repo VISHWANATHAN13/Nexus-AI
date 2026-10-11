@@ -1,0 +1,19 @@
+step: 1_tests
+command: C:\data\nexus_ai\nexus_final\.nexusai\Scripts\python.exe -m pytest tests/ -q -m not live
+when: 2026-10-10T05:16:44+00:00
+python: 3.13.7 on Windows
+exit code: 0
+seconds: 120.9
+==============================================================================
+.......................................................                  [100%]
+============================== warnings summary ===============================
+tests/test_knowledge.py::test_loaders_splitter_chroma_search_and_quarantine_of_a_poisoned_passage
+  C:\Program Files\Python313\Lib\importlib\__init__.py:88: DeprecationWarning: `langchain-community` is being sunset and is no longer actively maintained. See https://github.com/langchain-ai/langchain-community/issues/674 for details and migration guidance toward standalone integration packages.
+    return _bootstrap._gcd_import(name[level:], package, level)
+
+tests/test_mcp_registration.py::test_exactly_13_tools_4_resource_templates_2_prompts_and_an_entrypoint_per_server
+  C:\data\nexus_ai\nexus_final\.nexusai\Lib\site-packages\pydantic_settings\sources\utils.py:47: IncompleteFieldDefinitionWarning: Field 'lifespan' has an incomplete definition: its annotation contains an unresolved forward reference, so settings sources may fail to correctly resolve its value. Call `model_rebuild()` on the model where the field is defined, once all the referenced types are defined.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+55 passed, 4 deselected, 2 warnings in 106.59s (0:01:46)

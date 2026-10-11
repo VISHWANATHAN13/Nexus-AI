@@ -1,0 +1,25 @@
+# Prompt-injection signatures (regex, case-insensitive). Applied to customer text, retrieved documents and tool output.
+ignore_instructions: |-
+  \b(ignore|disregard|forget|override)\b[^.\n]{0,40}\b(previous|prior|above|earlier|all|any|your|the)\b[^.\n]{0,30}\b(instructions?|prompts?|rules?|guidelines?|polic(?:y|ies)|guardrails?)\b
+role_hijack: |-
+  \byou are now\b|\bact as (?:an? )?(?:admin|administrator|root|system|developer|dan)\b|\bpretend (?:to be|you are)\b
+prompt_leak: |-
+  \b(reveal|show|print|leak|output|repeat)\b[^.\n]{0,40}\b(system prompt|hidden instructions|developer message)\b
+data_exfiltration: |-
+  \b(reveal|disclose|expose|leak)\b[^.\n]{0,60}\b(account number|policy number|kyc|password|api key|credentials)\b
+chat_template_tokens: |-
+  <\|(?:im_start|im_end|system)\|>|\[/?INST\]|###\s*(?:system|instruction)
+jailbreak: |-
+  \b(jailbreak|developer mode|do anything now)\b
+tool_abuse: |-
+  \b(call|invoke|run|execute)\b[^.\n]{0,30}\b(write_audit_log|send_customer_notification|get_customer_kyc_status|run_escalation_check)\b
+disable_guardrails: |-
+  \b(disable|turn off|bypass)\b[^.\n]{0,30}\b(guardrails?|safety|filters?|sanitis\w*|sanitiz\w*)
+ignore_paraphrase: |-
+  \b(disregard|ignore|forget|set aside|dismiss)\b[^.\n]{0,30}\b(what you (?:were|have been) (?:told|instructed|given)|everything (?:above|before|you know)|your (?:earlier|previous|original) (?:directions|orders|setup))\b
+new_instructions: |-
+  \b(new|updated|revised|additional|replacement)\s+(instructions?|directives?|system prompt|rules)\s*[:\-]|\bfrom now on\b[^.\n]{0,40}\b(you (?:will|must|should|are)|always answer|respond only)\b
+approval_manipulation: |-
+  \b(mark|set|flag|treat|record)\b[^.\n]{0,30}\b(this customer|the customer|this request|this account)\b[^.\n]{0,20}\b(as )?(verified|approved|kyc[- ]?(?:verified|complete)|authori[sz]ed)\b
+exfil_destination: |-
+  \b(forward|send|email|e-mail|post|upload)\b[^.\n]{0,60}\b(kyc|account details|customer data|personal data|credentials|password)\b[^.\n]{0,60}(@|https?://)

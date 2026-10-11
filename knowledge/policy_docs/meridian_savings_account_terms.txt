@@ -1,0 +1,72 @@
+MERIDIAN FINANCIAL GROUP - SAVINGS ACCOUNT POLICY TERMS & CONDITIONS
+Version 2.0, Effective 2026-01-01
+
+1. ACCOUNT ELIGIBILITY & OPENING
+Meridian Savings Accounts are available to residents of the territory aged 18 or older, with valid identity documentation as per KYC (Know Your Customer) guidelines. Accounts may be opened individually or as joint holders (maximum 3 persons per account).
+
+2. MINIMUM BALANCE REQUIREMENTS
+- Standard Tier: Minimum opening balance of 10,000 INR
+- Premium Tier: Minimum opening balance of 1,00,000 INR, earns additional interest rebate of 0.5% p.a.
+- Failure to maintain minimum balance for 12 consecutive months results in account dormancy classification
+- Dormant account fees: 50 INR per quarter until reactivation
+
+3. INTEREST RATES & ACCRUAL
+Interest is calculated on daily balance and credited monthly on the last business day.
+Current rates (subject to change with 30-day notice):
+- Standard Tier: 4.5% per annum (daily balance method)
+- Premium Tier: 5.0% per annum (daily balance method)
+- Senior Citizens (60+ years): Additional 0.75% per annum
+- Interest-bearing fixed deposits: 6.5-7.2% depending on tenure (3-60 months)
+
+4. TRANSACTION LIMITS & RESTRICTIONS
+Monthly transaction limits (standard deposit/withdrawal):
+- ATM withdrawals: Maximum 5 free withdrawals per month; additional withdrawals charged at 20 INR each
+- Online transfers: Unlimited NEFT/RTGS transfers to registered beneficiaries
+- Cheque issuance: Unlimited (free cheque books provided quarterly)
+- Daily withdrawal limit: 1,00,000 INR per day via ATM; no limit for branch counter withdrawals
+
+5. AUTO-DEBIT FACILITY
+- Available for utility bills, insurance premiums, loan EMIs, and subscription services
+- Auto-debit mandate requires written authorization (physical or e-signed)
+- Payment window: 1st-28th of each month
+- Failed auto-debit attempts: System retries on next business day once; thereafter requires manual intervention
+- Auto-debit can be modified or cancelled via online portal or branch with 5 business days' notice
+
+6. LINKED ACCOUNTS & TRANSFERS
+Customers may link up to 5 external bank accounts for NEFT/RTGS transfers. Linking requires:
+- Account number and IFSC code verification
+- First transfer limited to maximum 10,000 INR (risk-mitigation measure)
+- Subsequent transfers unlimited once linking confirmation is received (3-7 business days)
+
+7. SWEEP ACCOUNTS & OVERDRAFT
+- Sweep Account Feature: Automatic transfer of surplus balance to linked Fixed Deposit on customer request; minimum sweep amount: 10,000 INR
+- Overdraft: Not available on standard savings accounts; available to Premium Tier with credit limit up to 50% of highest balance maintained in past 12 months. Overdraft interest: Repo Rate + 2.5%
+
+8. FEES & CHARGES
+- Account maintenance: Nil (waived for minimum balance maintenance)
+- Statement generation: Nil (monthly electronic, quarterly paper)
+- Non-resident account annual fee: 500 INR
+- Account closure fee (within 6 months of opening): 1,000 INR
+- Duplicate cheque issuance: 100 INR per cheque
+- Account reactivation: 250 INR (after 12+ months of dormancy)
+
+9. COMPLIANCE & REGULATORY REQUIREMENTS
+All account holders must comply with:
+- Regular KYC verification (annual for existing customers; bi-annual for NRI/HUF accounts)
+- Tax Residency Certificate submission as applicable
+- FATCA/CRS declarations for non-resident customers
+- Suspicious Activity Reporting per AML/CFT regulations
+- Fraudulent transaction reporting within 30 days of discovery
+
+10. ACCOUNT RESTRICTIONS & HOLDS
+Account may be restricted or frozen in case of:
+- Regulatory compliance failures or pending investigations
+- Court-ordered attachments or legal proceedings
+- Dormancy exceeding 24 months without customer contact
+- Breach of account agreement terms
+- Customer-initiated temporary freeze (available via online portal)
+
+11. DISPUTE RESOLUTION & COMPLAINT HANDLING
+- Response to complaints within 7 business days for straightforward issues
+- Complex disputes resolved within 45 days with escalation to Grievance Redressal Officer if unresolved
+- Ombudsman escalation available after 6 months without satisfactory resolution

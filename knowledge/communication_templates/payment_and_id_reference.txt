@@ -1,0 +1,401 @@
+MERIDIAN FINANCIAL GROUP - PAYMENT METHODS & ID FORMAT REFERENCE
+For Nexus Orchestrator Validation & Processing
+
+===================================================================================
+SECTION 1: CUSTOMER IDENTIFICATION FORMATS
+===================================================================================
+
+1.1 CUSTOMER ID FORMAT (CUS-XXXXX)
+Format: CUS-[5 digit numeric code]
+Pattern: CUS-XXXXX where X = 0-9
+Examples: CUS-20077, CUS-10001, CUS-95432
+Rules:
+- Generated server-side at account opening
+- Unique across Meridian Financial Group
+- Immutable; cannot be changed
+- Used for all customer inquiries and identification
+- Validation: Must match pattern /^CUS-\d{5}$/ or return TypeError: InvalidCustomerID
+
+Acceptable Customer IDs for Showcase Scenario:
+- CUS-20077 (Arjun Mehta - Primary showcase customer)
+- CUS-20076 (Test customer - spouse/co-applicant scenarios)
+- CUS-20075 (Test customer - cross-product inquiry)
+- CUS-20074 (Test customer - error scenarios)
+- CUS-20073 (Test customer - escalation scenarios)
+
+1.2 ACCOUNT NUMBER FORMAT (ACC-XXXXX)
+Format: ACC-[5 digit numeric code]
+Pattern: ACC-XXXXX where X = 0-9
+Examples: ACC-20077, ACC-10001, ACC-95432
+Rules:
+- Unique identifier for each bank account
+- One customer can have multiple account numbers
+- Account linking requires valid ACC and customer match
+- Validation: Must match pattern /^ACC-\d{5}$/ or return TypeError: InvalidAccountID
+
+Account Numbers for Showcase Scenario:
+- ACC-20077 (Arjun Mehta savings account, linked to CUS-20077)
+- ACC-20001 (Test account for business/current account scenarios)
+- ACC-20002 (Test account for cross-account transfer scenarios)
+
+1.3 POLICY NUMBER FORMAT (POL-XX-XXXXX)
+Format: POL-[2 letter product code]-[5 digit numeric]
+Pattern: POL-[A-Z]{2}-\d{5} where X = 0-9
+Examples: 
+- POL-IN-30091 (Insurance policy)
+- POL-HM-10001 (Home insurance)
+- POL-MO-50321 (Motor insurance)
+- POL-HE-70125 (Health insurance)
+
+Product Code Legend:
+- IN = General Insurance (multi-risk)
+- HM = Home Insurance
+- MO = Motor Insurance
+- HE = Health Insurance
+- TR = Travel Insurance
+- BU = Business Liability Insurance
+- PL = Personal Liability Insurance
+- GP = Group Insurance
+
+Rules:
+- Product code indicates insurance type; scope of coverage
+- One customer can have multiple policies
+- Policy number must exist in insurance_server database to access details
+- Validation: Must match pattern /^POL-[A-Z]{2}-\d{5}$/ or return TypeError: InvalidPolicyID
+
+Policy Numbers for Showcase Scenario:
+- POL-IN-30091 (Arjun Mehta general insurance policy, linked to CUS-20077)
+- POL-HM-20001 (Home insurance for various scenarios)
+- POL-MO-50001 (Motor insurance for various scenarios)
+
+1.4 PORTFOLIO ID FORMAT (PORT-XXXXX)
+Format: PORT-[5 digit numeric code]
+Pattern: PORT-\d{5} where X = 0-9
+Examples: PORT-20077, PORT-10001, PORT-95432
+Rules:
+- Unique identifier for each wealth management portfolio
+- One customer can have multiple portfolios (rare; typically one primary)
+- Portfolio must be accessed through wealth_server only
+- Validation: Must match pattern /^PORT-\d{5}$/ or return TypeError: InvalidPortfolioID
+
+Portfolio IDs for Reference:
+- PORT-20077 (Arjun Mehta wealth portfolio, linked to CUS-20077)
+- PORT-20001 (Test portfolio for investment scenarios)
+
+1.5 PRODUCT CODE FORMAT (PROD-XX-XX)
+Format: PROD-[2 letter category]-[2 letter type]
+Pattern: PROD-[A-Z]{2}-[A-Z]{2}
+Examples:
+- PROD-BK-SA (Banking - Savings Account)
+- PROD-BK-CD (Banking - Credit Card)
+- PROD-IS-HM (Insurance - Home)
+- PROD-IS-MO (Insurance - Motor)
+- PROD-WE-EQ (Wealth - Equity Fund)
+- PROD-WE-DB (Wealth - Debt Fund)
+
+Category Codes:
+- BK = Banking
+- IS = Insurance
+- WE = Wealth/Investments
+- LO = Loans
+- CR = Credit Products
+
+Type Codes (examples):
+Banking Types: SA, CD, FD, RD, CU, LO, HL, PL, VL, EL
+Insurance Types: HM, MO, HE, TR, BU, PL, GP, PE
+Wealth Types: EQ, DB, BD, HB, RE, AF, GB
+
+Rules:
+- Product codes identify available products for sale/offering
+- Used in portfolio construction and product recommendations
+- Validation: Must match /^PROD-[A-Z]{2}-[A-Z]{2}$/ or return ValueError: InvalidProductCode
+
+1.6 CLAIM NUMBER FORMAT (CLM-XXXXX)
+Format: CLM-[5 digit numeric code]
+Pattern: CLM-\d{5}
+Examples: CLM-20077, CLM-10001, CLM-95432
+Rules:
+- Generated at claim submission
+- Unique across all claims for tracking
+- Links to specific policy number
+- Used for claim status inquiries and communication
+- Validation: Must match /^CLM-\d{5}$/ or return TypeError: InvalidClaimID
+
+===================================================================================
+SECTION 2: PAYMENT METHODS & AUTO-DEBIT TERMS
+===================================================================================
+
+2.1 AUTO-DEBIT PAYMENT METHOD
+Availability: Savings, Current, and linked accounts
+Frequency Options:
+- Monthly: Processed on date selected (1-28 of month)
+- Quarterly: Jan-Apr-Jul-Oct, Apr-Jul-Oct-Jan, Jul-Oct-Jan-Apr, Oct-Jan-Apr-Jul
+- Half-yearly: January & July, or April & October
+- Annual: Single date in calendar year
+
+Retry Logic:
+- First attempt: On selected due date
+- If failed (insufficient balance): Retry on next business day
+- If second attempt fails: Auto-debit mandate canceled
+- Notification sent to customer on both failures
+
+Amount Flexibility:
+- Fixed amount: Same amount each period (e.g., EMI of 5,000 INR)
+- Variable amount: Varies based on outstanding balance (e.g., insurance premium)
+- Minimum transaction: 100 INR per auto-debit
+- Maximum per transaction: 10,00,000 INR (subject to daily limit)
+
+Authorization Requirements:
+- Physical mandate form (signed by customer) OR
+- E-mandate via online portal (e-signed with Aadhaar)
+- Mandate valid for 24 months; automatic renewal if not canceled
+- Cancellation notice: 5 business days prior to next scheduled debit
+
+Use Cases:
+- Insurance premium payment (all insurance types)
+- Loan EMI (housing, personal, auto, education loans)
+- Credit card bill payment (full or minimum amount)
+- Utility bills and subscriptions (via linked providers)
+- Investment (SIP - Systematic Investment Plan)
+- Savings plan (recurring deposit contributions)
+
+2.2 ONLINE TRANSFER METHODS
+
+NEFT (National Electronic Funds Transfer):
+- Settlement time: Real-time (within minutes during business hours)
+- Business hours: 8 AM - 7 PM on weekdays, 8 AM - 1 PM on Saturdays
+- Charges: 2.5 INR per transaction for amounts <100,000 INR (flat rate)
+- Useful for: Regular transfers, quick settlements
+- Minimum amount: 1 INR
+- Maximum amount: 10,00,000 INR per transaction
+
+RTGS (Real Time Gross Settlement):
+- Settlement time: Real-time (typically 30 minutes)
+- Business hours: 9 AM - 4:30 PM on weekdays (closed Saturdays)
+- Charges: 25 INR per transaction (flat rate, irrespective of amount)
+- Useful for: Urgent, large-value transfers
+- Minimum amount: 2,00,000 INR
+- Maximum amount: 1 crore INR per transaction
+
+IMPS (Immediate Payment Service):
+- Settlement time: 24/7 instant settlement
+- Available: Round-the-clock, including weekends & holidays
+- Charges: 5 INR per transaction
+- Useful for: Urgent payments at any time
+- Minimum amount: 1 INR
+- Maximum amount: 10,00,000 INR per transaction
+
+2.3 PAYMENT CHANNELS & VERIFICATION
+
+Branch Counter Payment:
+- Accepted: Cash, cheque, draft, credit card (EMI option)
+- Documents: Passbook/account statement + identity proof
+- Processing time: Immediate (cash); 3-5 days (cheque)
+- Charges: Nil for cash/cheque; GST applicable on credit card surcharge
+
+Mobile App / Online Portal:
+- Available: 24/7 for NEFT, RTGS, IMPS, auto-debit setup
+- Authentication: Multi-factor (password + OTP)
+- Limits: Verification required for first transfer to new beneficiary
+- Processing time: Immediate to real-time depending on method
+
+ATM Withdrawal:
+- Daily limit: 1,00,000 INR (Standard tier); Unlimited (Premium tier)
+- Charges: Free withdrawals (Standard 5/month), additional 20 INR each
+- Account access: Only from Meridian ATMs or partner network
+
+Call Center / Phone Banking:
+- Available: 9 AM - 9 PM weekdays; 10 AM - 6 PM Saturdays
+- Services: Bill pay, fund transfer (pre-registered beneficiaries only), status queries
+- Verification: Security questions, OTP confirmation
+- Toll-free: 1800-121-2020
+
+2.4 PAYMENT FAILURE & DISPUTE RESOLUTION
+
+Failure Scenarios & Resolution:
+
+Insufficient Balance:
+- Status: Transaction rejected; amount not debited
+- Notification: SMS/email within 1 hour
+- Retry: System retries once on next business day (auto-debit only)
+- Resolution: Top-up account balance and retry
+
+Invalid Account/Beneficiary:
+- Status: Bounce; transaction returned to source account
+- Timeline: Return within 3-5 business days
+- Charges: Bounce charge of 200-500 INR applied by receiving bank
+- Prevention: Verify account details before initiating transfer
+
+Duplicate Transactions:
+- Status: Two identical transactions appear in account
+- Claim: Report within 30 days of discovery
+- Investigation: Bank investigates if duplicate charge occurred
+- Reversal: If confirmed, duplicate amount credited within 30 days
+
+Partial Payment/Amount Mismatch:
+- Status: Amount received differs from amount sent
+- Investigation: Bank traces with receiving bank (3-7 days)
+- Resolution: If no trace found in time, dispute escalated to ombudsman
+- Timeline: 45 days from discovery
+
+Transfer to Wrong Beneficiary:
+- Status: Money transferred to unintended recipient
+- Prevention: Verify account name/IFSC before transfer
+- Recovery: Impossible if beneficiary cashes out; legal recourse only
+- Mitigation: Banks now verify account name (matches first 4-6 characters)
+
+2.5 REGULATORY & LIMIT RULES
+
+Daily Transaction Limits:
+- ATM withdrawal: 1,00,000 INR (Standard tier; Premium unlimited)
+- Online transfer: No daily limit (but individual transaction caps apply)
+- Card transaction: 5,00,000 INR (varies by card tier)
+- Total debit per day: No regulatory limit (subject to account balance)
+
+Monthly Transaction Limits:
+- ATM withdrawals: 5 free; additional at 20 INR each
+- NEFT/RTGS transfers: Unlimited
+- Cheque issuance: Unlimited
+- Check book replenishment: One book (20-25 leaves) per request
+
+Verification Requirements:
+- First transfer to new beneficiary: Requires 24-48 hour verification
+- Large transactions (>10 lakhs): May trigger additional verification
+- International transfers: Require FEMA compliance documentation
+- Remittance beyond 50,000 INR per financial year: Tax filing requirement
+
+===================================================================================
+SECTION 3: PAYMENT STATUS & RECONCILIATION
+===================================================================================
+
+3.1 TRANSACTION STATUS CODES
+
+Pending: Payment initiated; awaiting bank processing
+- Typical duration: 1-24 hours for online transfers
+- Action: None; wait for processing
+
+Processing: Bank is processing the transaction
+- Typical duration: Real-time to 2-3 business days
+- Action: Monitor account; contact support if delayed >3 days
+
+Completed/Success: Payment successfully debited and credited
+- Money available in recipient's account immediately (RTGS/IMPS) or within 24 hours (NEFT)
+- Confirmation email/SMS sent to both parties
+- No action required; reconcile in accounting if needed
+
+Failed: Payment rejected/returned
+- Reason: Insufficient balance, invalid account, closed account, etc.
+- Amount: Refunded to source account within 1-3 business days
+- Charges: Bounce charge may apply
+- Action: Identify reason and retry with corrected details
+
+On Hold: Payment held pending verification
+- Reason: Duplicate check, fraud check, customer verification pending
+- Duration: 2-7 business days
+- Action: Respond to verification requests if contacted
+
+Reversed: Completed payment recalled
+- Reason: Regulatory requirement, fraud detection, customer request
+- Timeline: 5-30 days after original transaction
+- Action: Contact support if reversal seems incorrect
+
+3.2 PAYMENT RECONCILIATION FOR INVOICES
+
+Auto-Debit Confirmation:
+- Confirmation SMS: Sent within 5 minutes of successful debit
+- Bank statement: Debit appears same day (online portal, next calendar day for passbook)
+- Reference number: Provided in SMS for traceability
+
+Manual Payment Confirmation:
+- Receipt generated: Immediately after cash/cheque submission
+- Processing notification: Email/SMS when cheque clears (3-5 business days)
+- Credited confirmation: When amount posts to payee account
+
+Invoice Matching:
+- Standard practice: Match transaction amount to invoice amount ±
+- Tolerance: Exact match required for auto-debit; manual review if variance >500 INR
+- Outstanding balance: Updated in system within 24 hours of successful payment
+
+===================================================================================
+SECTION 4: PAYMENT SCENARIO MATRIX FOR NEXUS
+===================================================================================
+
+Common Payment Scenarios & Recommended Methods:
+
+Insurance Premium Payment:
+- Method: Auto-debit (preferred), online transfer, cheque, branch counter
+- Frequency: Annual, half-yearly, or monthly
+- Best for: Auto-debit avoids missed payments
+- Timeline: Due on stated date; 15-day grace period before lapse
+
+Loan EMI Payment:
+- Method: Auto-debit (strongly recommended), online transfer, cheque
+- Frequency: Monthly (standard)
+- Best for: Auto-debit ensures never-miss discipline
+- Penalty: Late payment fee if >5 days late
+
+Credit Card Bill Payment:
+- Method: Auto-debit (full bill), online transfer, branch counter
+- Frequency: Monthly (statement due date)
+- Best for: Auto-debit for full bill (avoids interest)
+- Grace period: 45 days interest-free if paid in full
+
+Utility & Subscription Bills:
+- Method: Auto-debit (preferred), online portal, branch counter
+- Frequency: Monthly/quarterly/annual
+- Best for: Auto-debit prevents service disconnection
+- Reminder: Notify issuer for auto-debit authorization first
+
+Investment Contributions (SIP):
+- Method: Auto-debit (standard), lump-sum online transfer
+- Frequency: Monthly/quarterly/annual
+- Best for: Auto-debit ensures disciplined investing
+- Minimum: 500 INR per month typical minimum
+
+Cross-Product Payments:
+- Example: Insurance premium from banking account; portfolio investment withdrawal to savings
+- Method: Depends on source and destination products
+- Coordination: Nexus orchestrates source account via banking_server → destination via insurance/wealth_server
+- Error handling: If source account restrictions detected, escalation required
+
+===================================================================================
+SECTION 5: PAYMENT ERROR HANDLING FOR NEXUS
+===================================================================================
+
+Error Scenarios & Nexus Responses:
+
+Invalid Customer ID (CUS-XXXXX mismatch):
+- Error Type: TypeError
+- Nexus Action: Return typed error at intake layer; no retrieval/payment attempt
+- Customer Message: "Customer ID format invalid or not found. Please verify your customer ID (format: CUS-XXXXX)"
+- Example: CUS-2077 (missing zero) → rejection
+
+Invalid Account ID (ACC-XXXXX mismatch):
+- Error Type: ValueError  
+- Nexus Action: Surface error to user; no payment attempt
+- Customer Message: "Account {account_id} not found or invalid. Please verify account number."
+- Example: AC-20077 (missing C) → rejection
+
+Insufficient Balance:
+- Error Type: InsufficientFundsError
+- Nexus Action: Return error; no debit attempted
+- Customer Message: "Insufficient balance in account {masked_account}. Required: ₹{amount}, Available: ₹{balance}"
+- Resolution: Customer tops up account and retries
+
+Account Restriction/Frozen:
+- Error Type: AccountRestrictedError
+- Nexus Action: Surface error; escalate to human
+- Customer Message: "Account {masked_account} is temporarily restricted. Please contact support at 1800-121-2020."
+- Reason: KYC overdue, fraud flag, court order, etc.
+
+Payment Method Unavailable:
+- Error Type: PaymentMethodUnavailableError
+- Nexus Action: Suggest alternative method; no payment attempt
+- Customer Message: "RTGS unavailable after 4:30 PM. Use IMPS (instant) or NEFT tomorrow."
+- Timing: RTGS unavailable after 4:30 PM, all day Saturday
+
+Duplicate Payment Detection:
+- Error Type: DuplicatePaymentWarning  
+- Nexus Action: Alert user; require confirmation before proceeding
+- Customer Message: "Similar payment just processed 1 hour ago. Proceed with new payment? Reply YES/NO."
+- Prevention: Reduces accidental duplicate payments
